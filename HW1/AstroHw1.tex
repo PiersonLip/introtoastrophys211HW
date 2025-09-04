@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{cancel}
+\usepackage{gensymb}
 \title{Astro HW 1}
 \author{Pierson Lipschultz}
 
@@ -8,14 +9,14 @@
 \section{}
 \subsection{}
 \begin{itemize}
-    \item A) Collaboration and working with fellow students is encouraged, however, work still must be that of the individual, and copying answers is not allowed 
-    \item B) Copying from others, cheating, enabling others to cheat, all are violations of academic honesty
-    \item C) Because they are the words/work of someone other than myself
+    \item A) Collaboration and working with fellow students is encouraged, however, work still must be that of the individual, and copying answers is not allowed. 
+    \item B) Copying from others, cheating, enabling others to cheat, all are violations of academic honesty.
+    \item C) Because they are the words/work of someone other than myself, meaning that I am not truly learning the material. 
 \end{itemize}
 \subsection{}
 
 \[tan^{-1}(\frac{61}{384}) \approx 9.0\deg\] \\
-\[9.0 * \frac{\pi}{180} \approx .16rad\]4
+\[9.0 * \frac{\pi}{180} \approx .16rad\]
 
 \subsection{}
 
@@ -75,25 +76,50 @@
 
 \[\hat{z} = \hat{z'}\cos(90 - \ell) - \hat{x'}\sin(90 - \ell)\]
 
+\[\hat{z} = \hat{z'}\cos(90 - \ell) - \hat{x'}\sin(90 - \ell)\]
+
+\[\hat{z} = \hat{z'}\sin(\ell) - \hat{x'}\cos(\ell)\]
+
 \subsubsection{d}
 
-\[\hat{s} = \hat{x}\cos(\ell) + \hat{z}\sin(\ell) \]
+\[\hat{s} = \hat{x}\cos(\delta) + \hat{z}\sin(\delta) \]
 
-\[\hat{s} = (\hat{z'}\cos(\ell) + \hat{x'}\sin(\ell))\cos(\ell) + (\hat{z'}\cos(90 - \ell) - \hat{x'}\sin(90 - \ell))\sin(\ell)\]
+% \[\hat{s} = (\hat{z'}\cos(\ell) + \hat{x'}\sin(\ell))\cos(\delta) + (\hat{z'}\sin(\ell) - \hat{x'}\cos(\ell))\sin(\delta)\]
 
-\[\hat{s} = \cos(\ell)(\hat{z'}\cos(\ell) + \hat{x'}\sin(\ell)) + \sin(\ell)(\hat{z'}\cos(90 - \ell) - \hat{x'}\sin(90 - \ell))\]
+\[\hat{s} = \cos(\delta)(\hat{z'}\cos(\ell) + \hat{x'}\sin(\ell)) + \sin(\delta)(\hat{z'}\sin(\ell) - \hat{x'}\cos(\ell))\]
+
+\[\hat{s} = \hat{z'}\cos(\ell)\cos(\delta) + \hat{x'}\sin(\ell)\cos(\delta) + \hat{z'}\sin(\ell)\sin(\delta) - \hat{x'}\cos(\ell)\sin(\delta)\]
+
+\[\hat{s} = \hat{z'}(\cos(\ell)\cos(\delta) + \sin(\ell)\sin(\delta)) + \hat{x'}(\sin(\ell)\cos(\delta) - \cos(\ell)\sin(\delta))\]
+
+\[\hat{s} = \hat{z'}\cos(\ell +\delta) + \hat{x'}\sin(\ell-\delta)\]
 
 \subsubsection{e}
 
-\[\theta = \ell + \delta, \ell < \delta\]
+\[\theta = \frac{\pi}{2} - (\ell + \delta), \ell < \delta\]
 
-\[\theta = \ell - \delta, \ell > \delta\]
+\[\theta = \frac{\pi}{2} - (\ell - \delta), \ell > \delta\]
 
 \subsubsection{f}
 
+\[\theta_{NCP} = \ell\]
 \subsubsection{g}
+
+\[\delta_{lim} = 40.11\overline{6} \degree - 90\degree\]
+\[\delta_{lim} \approx -49.884\degree \]
+\[\delta_{lim} \approx -49\degree 53'\]
+
+Yes, you can see  NGC 1316 from Champaign-Urbana. This is because $\delta_{NGC 1316} > \delta_{lim}$, or $37\degree12.5' > 49\degree 53'$, meaning that is it above the horizon at some point.
 
 \subsubsection{h}
 \[\delta = \ell\]
+
+\subsection{}
+\[d\Omega =\sin\theta d\theta d\phi\]
+\[\int d\Omega = \int_{0}^{2\pi}\int_{0}^{\theta_{r}}\sin\theta d\theta d\phi\]
+\[\Omega = \int_{0}^{2\pi}(-\cos\theta_{r} + 1) d\phi\]
+\[\Omega = (-\cos\theta_{r} + 1)\]
+\[\approx2\pi(-\cancel{1} -\frac{\theta^2}{2} +\cancel{1})\]
+\[\Omega = -\pi\theta^2\]
 
 \end{document}

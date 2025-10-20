@@ -1,7 +1,9 @@
 \documentclass{article}
 \usepackage{cancel}
 \usepackage{gensymb}
+
 \usepackage{tikz}
+
 \usetikzlibrary{angles,quotes}
 \usetikzlibrary{arrows.meta,calc}
 
@@ -23,7 +25,7 @@
 %  check this, random diff component needed for the star being greater mass, unsure where that eq comes from
 \begin{center} 
     \(P = 4.727\) days \(\times \frac{1 year}{365.25days} = .001294\) years \\
-    \(\frac{a^3}{1.09 M_\odot} = p^2, a = (.001294^2 \times 1.09 ^{1/3}\) \\
+    \(\frac{a^3}{1.09 M_\odot} = p^2, a = .001294^2 \times 1.09 ^{1/3}\) \\
     \(.056\)AU 
 \end{center}
 
@@ -53,12 +55,24 @@
 \end{center}
 
 \subsubsection{}
-
 \begin{center}
+\(v_b = \frac{2\pi (.056 \times 1.4996 \times 10^{11})}{4.727 * 24 * 3600}\) km/s \\
 
+\(v_b = 131\)km/s \\
+\vspace{6mm}
+\(v_a = \frac{M_B}{M_A}v_b\)\\
+\(v_a = \frac{3.2m_e}{1.09m_\odot}(\)131km/s\()\)\\
+\(v_a = 1.15\)m/s \\
 \end{center}
 
 \subsubsection{}
+
+\begin{center}
+    \(R_B = \frac{1}{2} v_b(t_2 - t_1)\)\\
+    \(\frac{10109 \times 2 }{131} = t_2 - t_1 \)\\
+    \(\Delta t = 154.35s\)
+    
+\end{center}
 
 \begin{center}
     
@@ -147,8 +161,41 @@
     \begin{center}
         Because we are assuming the orbits are circular and are effectively calculating the stars muddled together. If we had, for example, vectors of each, and thus eccentricity, we could find the gravitational pulls of each of the stars, and thus find the masses.
     \end{center}
+
 \subsection{}
 \subsubsection{}
 
+\begin{center}
+        \(\frac{m_a}{m_b} = \frac{v_a}{v_b}\)\\
+        \(\frac{m_a}{m_b} = \frac{108}{111}\)
+\end{center}
 
+\subsubsection{}
+
+\begin{center}
+    \(a = a_1 + a_2 = \frac{P}{2\pi}(v_1 + v_2)\)\\
+    \(P = 3.96 \times 24 \times 3600\)s \\
+    \(v_a = 108 \) km \(^{-1}\)\\
+    \(v_b = 111 \) km \(^{-1}\)\\
+    \vspace{6mm}
+    \(m_a + m_b = \frac{P}{2\pi G} (v_1 + v_2)^3 \)\\
+    \(m_{tot} = 8.57 \times 10^{30}\)kg
+\end{center}
+
+
+\subsubsection{}
+\begin{center}
+    \(\frac{m_a}{m_b} = \frac{108}{111}\)\\
+    \(m_a + m_b = 8.57 \times 10^{30}\)kg \\
+    \(m_a = \frac{108}{111}m_b \)\\
+    \(\frac{108}{111}m_b +m_b = 8.57 \times 10^{30}\)kg \\
+    \(\frac{219}{111}m_b = 8.57 \times 10^{30}\)kg \\
+    \(m_b = 4.34 \times 10^{30}\)kg\\
+    \(m_a = 8.57 \times 10^{30} - m_b\)\\
+    \(m_a = 4.22 \times 10^{30}\) kg
+
+
+
+
+\end{center}
 \end{document}

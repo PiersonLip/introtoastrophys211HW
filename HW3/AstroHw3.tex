@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{cancel}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{arrows.meta,calc}
+
+
+\title{Astro HW 3}
+\author{Pierson Lipschultz}
+
+\begin{document}
+\maketitle
+\setcounter{section}{3}
+\subsection{}
+\subsubsection{}
+\[r_{pe} = ae - a\]
+\[r_{pe} = a(e-1)\]
+
+\begin{center}
+    % Preamble:
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta}
+
+\begin{tikzpicture}[scale=2, >=Latex]
+  % Parameters
+  \def\a{2}   % semi-major axis
+  \def\b{1.2} % semi-minor axis
+  \def\e{0.6} % eccentricity
+  \def\c{\a*\e} % focal distance
+
+  % Axes
+  \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+  \draw[->] (0,-1.6) -- (0,1.6) node[above] {$y$};
+
+  % Ellipse
+  \draw[thick] (0,0) ellipse ({\a} and {\b});
+
+  % Foci
+  \coordinate (F1) at (-\c,0);
+  \coordinate (F2) at (\c,0);
+
+  % Top point of ellipse
+  \coordinate (P) at (0,\b);
+
+  % Draw radii
+  \draw (F1) -- (P);
+  \draw (F2) -- (P);
+
+  % Labels for distances
+  \node at (-0.9,0.65) {$r'=r$};
+  \node at (0.35,0.7) {$r$};
+
+  % Label semi-minor axis b
+  \draw[<->] (0,0) -- (P);
+  \node[left] at (0,0.6*\b) {$b$};
+
+  % Mark focus F1
+  \fill (F1) circle (0.04);
+
+  % Mark other focus (hollow circle)
+  \draw[thick] (F2) circle (0.08);
+
+  % Label ae
+  \draw[<->] (0,-0.25) -- (\c,-0.25);
+  \node at (0.5*\c,-0.45) {$ae$};
+
+  % Label ae
+  \draw[<->] (\c+.8,.25) -- (0, .25);
+  \node at (1*\b,.33) {$a$};
+
+\end{tikzpicture}
+\end{center}
+
+\[r_{pa} = ae - a\]
+\[r_{pa} = a(e+1)\]
+\subsubsection{}
+\begin{center}
+    % Preamble:
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta}
+
+\begin{tikzpicture}[scale=2, >=Latex]
+  % Parameters
+  \def\a{2}   % semi-major axis
+  \def\b{1.2} % semi-minor axis
+  \def\e{0.6} % eccentricity
+  \def\c{\a*\e} % focal distance
+
+  % Axes
+  \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+  \draw[->] (0,-1.6) -- (0,1.6) node[above] {$y$};
+
+  % Ellipse
+  \draw[thick] (0,0) ellipse ({\a} and {\b});
+
+  % Foci
+  \coordinate (F1) at (-\c,0);
+  \coordinate (F2) at (\c,0);
+
+  % Top point of ellipse
+  \coordinate (P) at (0,\b);
+
+  % Draw radii
+  \draw (F1) -- (P);
+  \draw (F2) -- (P);
+
+  % Labels for distances
+  \node at (0.7,0.8) {$\sqrt{(ae)^2 + b^2}$};
+
+  % Label semi-minor axis b
+  \draw[<->] (0,0) -- (P);
+  \node[left] at (0,0.6*\b) {$b$};
+
+  % Mark focus F1
+  \fill (F1) circle (0.04);
+
+  % Mark other focus (hollow circle)
+  \draw[thick] (F2) circle (0.08);
+
+\draw[<->] (0,-0.25) -- (\c,-0.25);
+  \node at (0.5*\c,-0.45) {$ae$};
+
+
+\end{tikzpicture}
+\end{center}
+
+
+\[e^2 = b^2 + (ae)^2\]
+\[\frac{a^2 - b^2}{a^2} = e^2\]
+\[\sqrt{1 - \frac{b^2}{a^2}} = e\]
+
+\subsubsection{}
+\[r_{pe} = a(1 - .4103) = .4276au\]
+\[r_{pa} = a(1 + .4103) = 1.0206au\]
+\begin{center}
+    if $p_{pe}$ is less than earths radius and $r_{pa}$ is greater than earths radius, at some point it must cross earths orbit.
+\end{center}
+
+
+\subsubsection{}
+\[t = 2\pi \frac{a^3}{GM}\]
+
+\[t = 2\pi\sqrt{\frac{4.33 \times 10^{13}}{6.67 \times 10^{-11} \times 1.988 \times 10^{30}}}\]
+\[t \approx 1804385 days \approx 4940.13 years\]
+
+\subsection{}
+\subsubsection{}
+\[E = k + u\]
+\[k = \frac{1}{2}m (\frac{GMm}{L})^2 (1+e^2 +2e \cos\theta)\]
+\[u = - \frac{(GM)^2m^3}{L^2}(1+e\cos\theta)\]
+\[E = \frac{1}{2}m (\frac{GMm}{L})^2 (1+e^2 +2e \cos\theta) - \frac{(GM)^2m^3}{L^2}(1+e\cos\theta) \]
+\[E = (\frac{G^2m^2m^3}{L^2})(\frac{1}{2} + \frac{e^2}{2} + e\cos\theta - 1 -e\cos\theta)\]
+\[E = (\frac{G^2m^2m^3}{L^2})(\frac{1}{2} + \frac{e^2}{2} + \cancel{e\cos\theta} - 1 \cancel{-e\cos\theta)}\]
+\[E = (\frac{G^2m^2m^2}{L^2})(\frac{m}{2})(e^2-1)\]
+
+
+\begin{center}
+    ran out of time to transcribe the rest into \LaTeX, rest is photos
+\end{center}
+\end{document}

@@ -3,6 +3,7 @@
 \usepackage{gensymb}
 \usepackage{tikz}
 \usepackage{amsmath}
+\usepackage{hyperref}
 \usetikzlibrary{angles,quotes}
 \usetikzlibrary{arrows.meta,calc}
 
@@ -21,7 +22,7 @@
 \setcounter{section}{\hwNUM}
 \subsection{Stellar Properties}
 
-Consider two stars A and B with properties \dots
+Given two stars A and B with properties \dots
 
 \begin{table}[htbp]
 \makebox[\linewidth][c]{%
@@ -118,7 +119,7 @@ T_B = \frac{9000}{(8.96 - 7.52) + 0.93} \approx 3.80\times10^{3}~\mathrm{K}
 
 \subsubsection*{(f) Luminosities}
 
-From the Stefan–Boltzmann law:
+From the Stefan-Boltzmann law:
 \[
 L = 4\pi R^2\sigma_\mathrm{SB}T^4
 \]
@@ -133,7 +134,7 @@ L_B = 4\pi(2.72\times10^{8})^2(5.67\times10^{-8})(3.80\times10^{3})^4
      \approx 1.10\times10^{25}~\mathrm{W}
 \]
 
-\subsubsection*{(g) H–R Diagram Location}
+\subsubsection*{(g) H-R Diagram Location \footnote{If whoever is grading this is horribly bored and has nothing better to do check out the script I wrote to streamline H-R diagram graphing of POSYDON Data using matplotlib and bokeh :) \url{https://github.com/PiersonLip/Posydon_HR_Graphing_Script} }}
 
 Star A: very cool, extremely luminous $\rightarrow$ upper right of the H–R diagram (red supergiant).  
 Star B: cooler main-sequence dwarf $\rightarrow$ lower right region (red dwarf).  
@@ -183,8 +184,16 @@ Given \dots
 Given \dots
 \[M = .5 M_\odot \approx 9.945 \times 10^{29} \text{kg}, \qquad  L = .1 L\odot \approx 3.83 \times 10^{25} \text{W}\]
 \[t_{fus} = \frac{4.1 \times 10^{-12} \text{J} \times 9.945 \times 10^{29} \text{kg}}{4(3.83 \times 10^{25} \text{W})\times 1.67 \times 10^{-27} \text{kg}} \approx 1.58 \times 10^{19} \text{s}\]
-\subsection{}
 
+\subsection{Stellar structure from opacity}
+Given \dots
+\[\kappa \propto \rho T^{-3.5}\]
+\[\frac{dT}{dr} \approx \frac{T}{R}\]
+\[\rho = M / (\frac{4}{3}\pi R^2)\]
+\[L=4\pi R^2 \sigma_{sb} T^4 \rightarrow T = \left( \frac{L}{4 \pi R^2 \sigma_{sb}} \right)^{1/4}\]
+
+\subsubsection{Deriving \(L \propto M^{5.5} R^{-.5} \)}
+\[\kappa = \frac{3M}{4\pi R^2}  \left(\frac{L}{4\pi R^2\sigma_{sb}}\right)^{1/4}R\]
 \subsection{Extra Credit}
 \subsubsection{}
 The parallax error would affect its location on the y-axis. This is because the parallax would affect the distance measured, which in turn effect the absolute luminosity, hence shifting the location on the y-axis.\footnote{It could also affect the x-axis through redshift + Hubble const, but if a parallax error is that big you might have bigger problems.}

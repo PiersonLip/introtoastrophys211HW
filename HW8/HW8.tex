@@ -12,7 +12,7 @@
 \def\hwNUM{8}
 
 \title{Astro HW \hwNUM}
-\author{Pierson Lipschultz}
+\author{Pierson Lipschultz \thanks{If there's anything I can do to make grading easier please let me know :)}}
 
 \sloppy
 \begin{document}
@@ -44,34 +44,29 @@ d(\mathrm{pc}) = \frac{1}{\theta_\mathrm{parallax}('')}
 \]
 
 \[
-d_A = \frac{1}{0.00451} \approx 221.72~\mathrm{pc}, \qquad
-d_B = \frac{1}{0.393} \approx 2.544~\mathrm{pc}
+d_A = \frac{1}{0.00451} \boxed{\approx 221.72~\mathrm{pc}}, \qquad
+d_B = \frac{1}{0.393} \boxed{\approx 2.544~\mathrm{pc}}
 \]
 
 \subsubsection*{(b) Radii}
 
-From the small-angle relation
+Given the small-angle relation \dots
 \[
 \theta_\mathrm{diam} = \frac{2R}{d} \qquad \Rightarrow \qquad R = \frac{\theta_\mathrm{diam}}{2}\,d
 \]
-with $\theta$ in radians ($1'' = 4.848\times10^{-6}$~rad):
+
+We find \dots
 
 \[
 R_A = \frac{43.43\times10^{-3}}{2\times206265}\,(221.72)(3.086\times10^{16})
-   \approx 7.20\times10^{11}~\mathrm{m}
+   \boxed{\approx 7.20\times10^{11}~\mathrm{m}  \approx 1.035\times10^{3}R_\odot}
 \]
 
 \[
 R_B = \frac{1.43\times10^{-3}}{2\times206265}\,(2.544)(3.086\times10^{16})
-   \approx 2.72\times10^{8}~\mathrm{m}
+   \boxed{\approx 2.72\times10^{8}~\mathrm{m} \approx 0.391R_\odot}
 \]
 
-Expressed in solar radii ($R_\odot=6.96\times10^{8}$ m):
-
-\[
-R_A \approx 1.035\times10^{3}R_\odot, \qquad
-R_B \approx 0.391R_\odot
-\]
 
 \subsubsection*{(c) Surface Gravity}
 
@@ -86,12 +81,12 @@ M_B = 0.46\,M_\odot = 9.15\times10^{29}\,\mathrm{kg}
 
 \[
 g_A = \frac{6.67\times10^{-11}(3.89\times10^{31})}{(7.20\times10^{11})^2}
-     \approx 5.0\times10^{-3}~\mathrm{m/s^2}
+     \boxed{\approx 5.0\times10^{-3}~\mathrm{m/s^2}}
 \]
 
 \[
 g_B = \frac{6.67\times10^{-11}(9.15\times10^{29})}{(2.72\times10^{8})^2}
-     \approx 8.2\times10^{2}~\mathrm{m/s^2}
+     \boxed{\approx 8.2\times10^{2}~\mathrm{m/s^2}}
 \]
 
 \subsubsection*{(d) Luminosity Class Comparison}
@@ -113,8 +108,8 @@ T \approx \frac{9000~\mathrm{K}}{(B - V) + 0.93}
 \end{equation}
 
 \[
-T_A = \frac{9000}{(2.27 - 0.42) + 0.93} \approx 3.24\times10^{3}~\mathrm{K}, \qquad
-T_B = \frac{9000}{(8.96 - 7.52) + 0.93} \approx 3.80\times10^{3}~\mathrm{K}
+T_A = \frac{9000}{(2.27 - 0.42) + 0.93} \boxed{\approx 3.24\times10^{3}~\mathrm{K}}, \qquad
+T_B = \frac{9000}{(8.96 - 7.52) + 0.93} \boxed{\approx 3.80\times10^{3}~\mathrm{K}}
 \]
 
 \subsubsection*{(f) Luminosities}
@@ -126,15 +121,15 @@ L = 4\pi R^2\sigma_\mathrm{SB}T^4
 
 \[
 L_A = 4\pi(7.20\times10^{11})^2(5.67\times10^{-8})(3.24\times10^{3})^4
-     \approx 4.06\times10^{31}~\mathrm{W}
+     \boxed{\approx 4.06\times10^{31}~\mathrm{W}}
 \]
 
 \[
 L_B = 4\pi(2.72\times10^{8})^2(5.67\times10^{-8})(3.80\times10^{3})^4
-     \approx 1.10\times10^{25}~\mathrm{W}
+    \boxed{ \approx 1.10\times10^{25}~\mathrm{W}}
 \]
 
-\subsubsection*{(g) H-R Diagram Location \footnote{If whoever is grading this is horribly bored and has nothing better to do check out the script I wrote to streamline H-R diagram graphing of POSYDON Data using matplotlib and bokeh :) \url{https://github.com/PiersonLip/Posydon_HR_Graphing_Script} }}
+\subsubsection*{(g) H-R Diagram Location \footnote{If whoever is grading this is horribly bored, and has nothing better to do, check out the script I wrote to streamline H-R diagram graphing of POSYDON Data using matplotlib and bokeh :) \url{https://github.com/PiersonLip/Posydon_HR_Graphing_Script} }}
 
 Star A: very cool, extremely luminous $\rightarrow$ upper right of the H–R diagram (red supergiant).  
 Star B: cooler main-sequence dwarf $\rightarrow$ lower right region (red dwarf).  
@@ -176,14 +171,37 @@ We can derive \dots
 
 Where \dots
     \[\Delta E = 4.1 \times 10^{-12} \text{J}, \qquad m_p = 1.67 \times 10^{-27} \text{kg}\]
+
+Additionally, we are given \dots
+\begin{equation}
+    \tau = 10 \text{Gyr}\left(\frac{M}{M_\odot}\right)^{-3}
+    \tag{15.55}
+\end{equation}
+
 \subsubsection{High-Mass}
 Given \dots
-\[M = 100 M_\odot \approx 1.989 \times 10^{32} \text{kg}, \qquad  L = 10^6 L\odot \approx 3.83 \times 10^{32} \text{W}\]
-\[t_{fus} = \frac{4.1 \times 10^{-12} \text{J} \times 1.989 \times 10^{32} \text{kg}}{4(3.83 \times 10^{32} \text{W})\times 1.67 \times 10^{-27} \text{kg}} \approx 3.187 \times 10^{14} \text{s}\]
+    \[M = 100 M_\odot \approx 1.989 \times 10^{32} \text{kg}, \qquad  L = 10^6 L\odot \approx 3.83 \times 10^{32} \text{W}\]
+We find that \dots
+    \[t_{fus} = \frac{4.1 \times 10^{-12} \text{J} \times 1.989 \times 10^{32} \text{kg}}{4(3.83 \times 10^{32} \text{W})\times 1.67 \times 10^{-27} \text{kg}} \boxed{\approx 3.187 \times 10^{14} \text{s} \approx 1 \times 10^7 \text{yr}}\]
+
+Using equation 15.55 \dots
+    \[\tau = 10 \text{Gyr}\left(\frac{\text{100}\text{M}_\odot}{\text{M}_\odot}\right)^{-3} = \frac{1}{100000} \times 10\text{Gyr} = 1  \times 10^4\text{yr} \]
+
+Thus, we find that\dots
+    \[\frac{t_{fus}}{\tau} = 10^3\]
+This means our approximation is off by 3 orders of magnitude 
+
 \subsubsection{Low-mass}
 Given \dots
-\[M = .5 M_\odot \approx 9.945 \times 10^{29} \text{kg}, \qquad  L = .1 L\odot \approx 3.83 \times 10^{25} \text{W}\]
-\[t_{fus} = \frac{4.1 \times 10^{-12} \text{J} \times 9.945 \times 10^{29} \text{kg}}{4(3.83 \times 10^{25} \text{W})\times 1.67 \times 10^{-27} \text{kg}} \approx 1.58 \times 10^{19} \text{s}\]
+    \[M = .5 M_\odot \approx 9.945 \times 10^{29} \text{kg}, \qquad  L = .1 L\odot \approx 3.83 \times 10^{25} \text{W}\]
+We find that \dots
+    \[t_{fus} = \frac{4.1 \times 10^{-12} \text{J} \times 9.945 \times 10^{29} \text{kg}}{4(3.83 \times 10^{25} \text{W})\times 1.67 \times 10^{-27} \text{kg}} \approx \boxed{1.58 \times 10^{19} \text{s} \approx 5.006 \times 10^{11} \text{yr}}\]
+Using equation 15.55 we find \dots
+    \[\tau = 10\text{Gyr}\left(\frac{.5\text{M}_\odot}{\text{M}_\odot}\right)^{-3} = 8 \times 10 \text{Gyr} = \boxed{8\times 10^{10}\text{yr}}\]
+Thus, we find that \dots
+    \[\frac{t_{fus}}{\tau} = \frac{5.06 \times 10^{11}}{8 \times 10^{10}} \approx 6.25\]
+Hence, our approximation is only off by a factor of \(\approx 6.25\) 
+    
 
 \subsection{Stellar structure from opacity}
 Given \dots

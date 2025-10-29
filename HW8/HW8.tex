@@ -37,6 +37,20 @@ Star B & M2 V  & 8.96 & 7.52 & 1.43 & 0.393   & 0.46 \\
 \end{tabular}}
 \end{table}
 
+\begin{table}[htbp]
+\makebox[\linewidth][c]{%
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Name} & \textbf{Distance (pc)} & \textbf{Radius (m)} & \textbf{Radius ($R_\odot$)} &
+\textbf{$g$ (m/s$^2$)} & \textbf{Temp (K)} & \textbf{$L_{\text{tot}}$ (W)} \\
+\hline
+Star A & 221.72 & $7.20\times10^{11}$ & $1.04\times10^{3}$ & $5.0\times10^{-3}$ & $3.24\times10^{3}$ & $4.06\times10^{31}$ \\
+Star B & 2.544  & $2.72\times10^{8}$  & $3.91\times10^{-1}$ & $8.2\times10^{2}$ & $3.80\times10^{3}$ & $1.10\times10^{25}$ \\
+\hline
+\end{tabular}}
+\end{table}
+
+
 \subsubsection*{(a) Distances}
 
 \[
@@ -119,6 +133,7 @@ From the Stefan-Boltzmann law:
 L = 4\pi R^2\sigma_\mathrm{SB}T^4
 \]
 
+We find\dots
 \[
 L_A = 4\pi(7.20\times10^{11})^2(5.67\times10^{-8})(3.24\times10^{3})^4
      \boxed{\approx 4.06\times10^{31}~\mathrm{W}}
@@ -134,19 +149,6 @@ L_B = 4\pi(2.72\times10^{8})^2(5.67\times10^{-8})(3.80\times10^{3})^4
 Star A: very cool, extremely luminous $\rightarrow$ upper right of the H–R diagram (red supergiant).  
 Star B: cooler main-sequence dwarf $\rightarrow$ lower right region (red dwarf).  
 Both positions are consistent with their spectral classifications.
-
-\begin{table}[htbp]
-\makebox[\linewidth][c]{%
-\begin{tabular}{lcccccc}
-\hline
-\textbf{Name} & \textbf{Distance (pc)} & \textbf{Radius (m)} & \textbf{Radius ($R_\odot$)} &
-\textbf{$g$ (m/s$^2$)} & \textbf{Temp (K)} & \textbf{$L_{\text{tot}}$ (W)} \\
-\hline
-Star A & 221.72 & $7.20\times10^{11}$ & $1.04\times10^{3}$ & $5.0\times10^{-3}$ & $3.24\times10^{3}$ & $4.06\times10^{31}$ \\
-Star B & 2.544  & $2.72\times10^{8}$  & $3.91\times10^{-1}$ & $8.2\times10^{2}$ & $3.80\times10^{3}$ & $1.10\times10^{25}$ \\
-\hline
-\end{tabular}}
-\end{table}
 
 
 \subsection{Stellar main sequence lifetimes}
@@ -185,10 +187,10 @@ We find that \dots
     \[t_{fus} = \frac{4.1 \times 10^{-12} \text{J} \times 1.989 \times 10^{32} \text{kg}}{4(3.83 \times 10^{32} \text{W})\times 1.67 \times 10^{-27} \text{kg}} \boxed{\approx 3.187 \times 10^{14} \text{s} \approx 1 \times 10^7 \text{yr}}\]
 
 Using equation 15.55 \dots
-    \[\tau = 10 \text{Gyr}\left(\frac{\text{100}\text{M}_\odot}{\text{M}_\odot}\right)^{-3} = \frac{1}{100000} \times 10\text{Gyr} = 1  \times 10^4\text{yr} \]
+    \[\tau = 10 \text{Gyr}\left(\frac{\text{100}\text{M}_\odot}{\text{M}_\odot}\right)^{-3} = \frac{1}{100000} \times 10\text{Gyr} = \boxed{1  \times 10^4\text{yr}} \]
 
 Thus, we find that\dots
-    \[\frac{t_{fus}}{\tau} = 10^3\]
+    \[\frac{t_{fus}}{\tau} \boxed{= 10^3}\]
 This means our approximation is off by 3 orders of magnitude 
 
 \subsubsection{Low-mass}
@@ -199,19 +201,35 @@ We find that \dots
 Using equation 15.55 we find \dots
     \[\tau = 10\text{Gyr}\left(\frac{.5\text{M}_\odot}{\text{M}_\odot}\right)^{-3} = 8 \times 10 \text{Gyr} = \boxed{8\times 10^{10}\text{yr}}\]
 Thus, we find that \dots
-    \[\frac{t_{fus}}{\tau} = \frac{5.06 \times 10^{11}}{8 \times 10^{10}} \approx 6.25\]
+    \[\frac{t_{fus}}{\tau} = \frac{5.06 \times 10^{11}}{8 \times 10^{10}} \boxed{\approx 6.25}\]
 Hence, our approximation is only off by a factor of \(\approx 6.25\) 
     
 
 \subsection{Stellar structure from opacity}
 Given \dots
 \[\kappa \propto \rho T^{-3.5}\]
-\[\frac{dT}{dr} \approx \frac{T}{R}\]
-\[\rho = M / (\frac{4}{3}\pi R^2)\]
-\[L=4\pi R^2 \sigma_{sb} T^4 \rightarrow T = \left( \frac{L}{4 \pi R^2 \sigma_{sb}} \right)^{1/4}\]
+\[\frac{dT}{dr} \approx \frac{T}{R}  \propto \frac{\cancel{3}\kappa \rho L}{\cancel{64\pi \sigma_{sb}}R^2 T^3}, \qquad (15.76)\]
+% \[\frac{dP}{dR} = \frac{GM}{}\]
+\[\rho = M / (\cancel{\frac{4}{3}}\pi R^3)\]
+\[P \propto \rho T \rightarrow T \propto \frac{P}{\rho} \propto \frac{PR^3}{M}\]
+\[\frac{P}{R} \propto \frac{M\rho}{R^2} \rightarrow P \propto \frac{M\rho}{R} \propto \frac{M^2}{R^4}\]
+\[L \propto R^2T^4 \]
+
+% \[L=4\pi R^2 \sigma_{sb} T^4 \rightarrow T = \left( \frac{L}{4 \pi R^2 \sigma_{sb}} \right)^{1/4}\]
 
 \subsubsection{Deriving \(L \propto M^{5.5} R^{-.5} \)}
-\[\kappa = \frac{3M}{4\pi R^2}  \left(\frac{L}{4\pi R^2\sigma_{sb}}\right)^{1/4}R\]
+% \[\kappa = \frac{3M}{4\pi R^2}  \left(\frac{L}{4\pi R^2\sigma_{sb}}\right)^{1/4}R\]
+\[\frac{T}{R} \propto \frac{k\rho L}{R^2 T^3}\]
+\[\frac{1}{L} \propto \frac{R\kappa \rho }{R^2T^4}\]
+\[\frac{1}{L} \propto \frac{\rho^2}{RT^{7.5}}\]
+\[L \propto \frac{RT^{7.5}}{\rho^2}\]
+\[L \propto \frac{R^7T^{7.5}}{M^2}\]
+\[L \propto \frac{R^7\left(\frac{P R^3}{M}\right)^{7.5}}{M^2}\]
+\[L \propto \frac{R^{29.5}P^{7.5}}{M^{4.5}}\]
+\[L \propto \frac{R^{29.5}\left(\frac{M^2}{R^4}\right)^{7.5}}{M^{4.5}}\]
+\[L \propto \frac{R^{-.5}}{M^{-5.5}} \propto M^{5.5} R^{-.5}\]
+
+
 \subsection{Extra Credit}
 \subsubsection{}
 The parallax error would affect its location on the y-axis. This is because the parallax would affect the distance measured, which in turn effect the absolute luminosity, hence shifting the location on the y-axis.\footnote{It could also affect the x-axis through redshift + Hubble const, but if a parallax error is that big you might have bigger problems.}

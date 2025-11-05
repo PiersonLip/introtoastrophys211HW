@@ -3,6 +3,7 @@
 \usepackage{gensymb}
 \usepackage{tikz}
 \usepackage{amsmath}
+\usepackage{ amssymb }
 \usetikzlibrary{angles,quotes}
 \usetikzlibrary{arrows.meta,calc}
 
@@ -24,7 +25,7 @@ Given \dots
 \[M = -1.1 \]
 \[d = 800\text{pc}\]
 We find \dots
-\[m = 5\log(d)-5 -1.1 \boxed{\approx 8.415}\]
+\[m = 5\log(800)-5 -1.1 \boxed{\approx 8.415}\]
 \subsubsection{Apparent Mag Behind Nebula}
 Given \dots
 \[m-M=5\log(d)-5 + A_v\]
@@ -46,10 +47,107 @@ We find that \dots
 
 
 \subsection{Ionizing stars and HII regions}
-\subsubsection{}
+\subsubsection{Upper bound of T }
+\def\phv{13.6}
+\def\k{1.3806 \times 10^{-23}}
 Given \dots
 \[E = hv = hc/\lambda\]
+\[k = \k\]
+\[hv = \phv J = 13.6ev \times 1.6021810^{-19}J/ev = 2.1789 \times 10^{-18} ev \]
 
+We find that \dots
+\[2.1789 \times 10^{-18} > \k T\]
+\[\frac{2.1789 \times 10^{-18}}{\k} > T \]
+\[\boxed{157827K \gtrsim T} \]
+
+Given \dots
+% \[I_\nu = \frac{2h\nu^3}{c^2} \frac{1}{e^{h\nu/k_BT} - 1}, \qquad I_\nu = \frac{2h\nu^3}{(c^2)(e^{h\nu/k_BT)}} \] 
+% \[I_\nu \propto \nu^3 e^{-h\nu/kT}\]
+% \[L_\star = (4\pi R^2)\pi I_\nu\]
+% \[Q_\star = \int \frac{L_\star}{h\nu}d\nu\]
+% \[\int x^2 e^{cx} = e^{cx}(\frac{x^2}{c} - \frac{2x}{c^2} + \frac{2}{c^3})\]
+% We find \dots
+% \[Q_\star = \int \frac{(4\pi R^2)\pi \frac{2h\nu^{\cancel{3}2}}{(c^2)(e^{h\nu/k_BT)}}}{h\cancel{\nu}}d\nu\]
+% \[Q_\star = \frac{(4\pi^2 R^2)}{c^2}(2h)\int \frac{\nu^2}{(e^{h\nu/k_BT)}}d\nu\]
+% \[\qquad c = \frac{(4\pi^2 R^2)}{c^2}(2h)\]
+% \def\c{\frac{(4\pi^2 R^2)}{c^2}(2h)}
+
+% \[Q_\star = c\int \frac{\nu^2}{(e^{h\nu/k_BT)}}d\nu\]
+% \[u = h\nu/k_B T, \qquad \nu = k_B T/h, \qquad du = h/k_BT\]
+
+% \[Q_\star = \frac{k_BT}{h} \c (k_B T/h)^2\int \frac{u^2}{e^{u}}du\]
+
+% \def\ctwo{\frac{k_BT}{h} \c (k_B T/h)^2}
+
+% \[Q_\star = \ctwo\left(e^{-u}(\frac{u^2}{-1} - \frac{2u}{1} + \frac{2}{-1})\right)\]
+% \def\unum{h\nu/k_B T}
+% \[Q_\star = \ctwo\left(e^{-\unum}(\frac{\unum^2}{-1} - \frac{2\unum}{1} + \frac{2}{-1})\right)\]
+
+
+\subsubsection{}
+
+Given \dots
+\[
+I_\nu = \frac{2h\nu^3}{c^2} e^{-h\nu / k_B T},
+\]
+
+\[
+L_\nu = (4\pi R^2)\pi I_\nu = \frac{8\pi^2 h R^2 \nu^3}{c^2} e^{-h\nu / k_B T}.
+\]
+
+We find that \dots
+\[
+Q_\star = \int_{\nu_0}^{\infty} \frac{L_\nu}{h\nu}\,d\nu
+        = \frac{8\pi^2 R^2}{c^2}\int_{\nu_0}^{\infty} \nu^2 e^{-h\nu / k_B T}\,d\nu.
+\]
+
+Let\dots
+\[
+u = \frac{h\nu}{k_B T}, \qquad \nu = \frac{k_B T}{h}u, \qquad d\nu = \frac{k_B T}{h}\,du.
+\]
+
+Substituting gives\dots
+\[
+Q_\star = \frac{8\pi^2 R^2}{c^2}\left(\frac{k_B T}{h}\right)^3 
+\int_{u_0}^{\infty} u^2 e^{-u}\,du,
+\qquad u_0 = \frac{h\nu_0}{k_B T} = \frac{E_0}{k_B T}.
+\]
+
+Using the identity\dots
+\[
+\int u^2 e^{-u}\,du = -e^{-u}(u^2 + 2u + 2),
+\]
+We find\dots
+\[
+Q_\star = \frac{8\pi^2 R^2}{c^2}\left(\frac{k_B T}{h}\right)^3 
+e^{-u_0}(u_0^2 + 2u_0 + 2).
+\]
+Thus\dots
+\[
+Q_\star = 
+\frac{8\pi^2 R^2}{c^2}\left(\frac{k_B T}{h}\right)^3 
+e^{-E_0 / k_B T}
+\left[
+\left(\frac{E_0}{k_B T}\right)^2 
++ 2\frac{E_0}{k_B T} + 2
+\right].
+\]
+Solving for \(T = 43650\) and \(R = 10.7R_\odot\)\dots
+
+\[\boxed{Q_\star = 2.197 \times 10^{49} \text{s}^{-1}}\]
+
+\subsubsection{}
+Given\dots 
+\[R_s = \left(\frac{3}{4\pi} \frac{Q_\star }{n_e^2\alpha (T_e)}\right)^{1/3}\]
+\[\qquad n_e = 10^9 m^{-3},
+\qquad \alpha = 2.6 \times 10^{-19}m^3s^{-1},
+\qquad Q_\star = 2.197 \times 10^{49} \text{s}^{-1}\]
+Solving we find that \dots
+
+\[
+\boxed{
+   R_s \approx 2.7224349\times 10^{16}\text{m} \approx .882\text{pc} \approx 88\% \text{ of the normal distance}
+}\]
 
 \subsection{Conservation of angular momentum}
 \subsubsection{Deriving 17.15}
@@ -61,7 +159,7 @@ Given \dots
 We find that \dots
 \[2/5 mr_f v_f = 2/5 mr_0 v_0\]
 \[\cancel{2/5 m}r_f v_f = \cancel{2/5 m}r_0 v_0\]
-\[v_f = \frac{r_0}{r_f} v_0 \]
+\[\boxed{v_f = \frac{r_0}{r_f} v_0 }\]
 
 \subsubsection{Verify Scaling}
 Given \dots
@@ -72,7 +170,7 @@ Given \dots
 We find that\dots
 \[\frac{GM}{r_f} = v_0^2 \frac{r_0^2}{r_f^2}\]
 \[\frac{1}{\cancel{r_f}}r_f^{\cancel{2}} = v_0^2 \frac{r_0^2}{GM}\]
-\[r_f = \frac{v_0^2 r^2 }{GM}\]
+\[\boxed{r_f = \frac{v_0^2 r^2 }{GM}}\]
 
 Given\dots
 \[M = 2 \times 10^{30}\]
@@ -81,7 +179,7 @@ Given\dots
 \[G = 6.67 \times 10^{-11}\]
 We find that\dots
 \[r_f = \frac{100^2 \times 10^{10}}{6.67\times 10^{-11} \times {2 \times 10^{30}}}\]
-\[r_f \approx \boxed{7.496 \times 10^{-15} \text{m}}\]
+\[\boxed{r_f \approx 7.496 \times 10^{-15} \text{m}}\]
 
 
 \subsubsection{Enhancement}
@@ -105,7 +203,7 @@ We find that \dots
 \[\Delta M = 12\text{u} - 3 \times (M_{He} \times u) \approx -1.29685044 \times 10^{-29}\]
 \[E_{rel} = (1.29685044 \times 10^{-29})(300000000)^2\]
 \[E_{rel} \approx1.167165 \times 10^{-12}\]
-\[E_{pNuc} = \frac{1.167165 \times 10^{-12}}{12} \boxed{\approx 9.7263783 \times 10^{-14} \text{J}}\]
+\[\boxed{E_{pNuc} = \frac{1.167165 \times 10^{-12}}{12} \approx 9.7263783 \times 10^{-14} \text{J}}\]
 
 \subsubsection{Star with He Core lifetime}
 Given \dots
@@ -136,11 +234,15 @@ E_{\mathrm{tot}} = N_{rxn} E_{rxn} = 3.49\times10^{43}\ \mathrm{J}
 \]
 
 \[
+\boxed{
 t_{He Burn} = \frac{E_{\mathrm{tot}}}{L}
    = \frac{3.49\times10^{43}}{9.57\times10^{27}}
-   \boxed{\approx 3.64\times10^{15}\ \mathrm{s}
-          \approx 1.16\times10^{8}\ \mathrm{yr}}
+   \approx 3.64\times10^{15}\ \mathrm{s}
+          \approx 1.16\times10^{8}\ \mathrm{yr}
+}
 \]
+
+
 
 \subsubsection{Energy released from C \(\rightarrow\) Si and Si \(\rightarrow\) Fe Fusion}
 
@@ -190,7 +292,9 @@ E_{C\to Si} = \Delta m_{C\to Si}\,c^2
 \]
 
 \[
-E_n = \frac{E_{C\to Si}}{28} \approx 1.79\times10^{-13}\ \mathrm{J}.
+\boxed{
+   E_n = \frac{E_{C\to Si}}{28} \approx 1.79\times10^{-13}\ \mathrm{J}.
+   }
 \]
 
 \paragraph{(ii) \(Si \rightarrow Fe\)}
@@ -211,7 +315,9 @@ E_{Si\to Fe} = \Delta m_{Si\to Fe}\,c^2
 
 
 \[
+\boxed{
 E_n = \frac{E_{Si\to Fe}}{56} = 5.05\times10^{-14}\ \mathrm{J}
+}
 \]
 
 \noindent
@@ -251,5 +357,5 @@ We find \dots
 
 \[t = -\left(\frac{\sqrt{r_0^3}}{\sqrt{2GM}}\right)\left(\frac{\pi}{2}\right)\]
 
-
+\[\]
 \end{document}

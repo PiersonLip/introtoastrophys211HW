@@ -89,14 +89,14 @@ We find \dots
 }
 \]
 
-\begin{codeblockPython}
-theta_snr = 1.2 * u.arcmin #angular diam
-V_snr = 14000 * u.km / u.s
-d_snr = 8.5 * u.kpc
+% \begin{codeblockPython}
+% theta_snr = 1.2 * u.arcmin #angular diam
+% V_snr = 14000 * u.km / u.s
+% d_snr = 8.5 * u.kpc
 
-R_snr = .5 * (theta_snr * d_snr) / u.rad
-t_0 = R_snr / V_snr
-\end{codeblockPython}
+% R_snr = .5 * (theta_snr * d_snr) / u.rad
+% t_0 = R_snr / V_snr
+% \end{codeblockPython}
 
 \subsubsection{Neutrinos per sec}
 Given\dots
@@ -170,13 +170,11 @@ No, this is not possible. This is because \(\boxed{a < r_{wd}}\), meaning that t
 Given \dots
 \[v_{rot}= \frac{2\pi R}{P} \rightarrow P = \frac{2\pi R}{v_{rot}}\]
 \[v_{rot}(P,M) \approx .1c\left(\frac{P}{1s}\right)^{-1}\left(\frac{M}{.7M_\odot}\right)^{-1/3} \]
-
+\[P = 1.337\text{s} \qquad M = .7\text{M}_\odot\]
 We find that \dots
 
-Taking \(P = 1\)s \dots
-\[v_{rot} \approx 2.662 \times 10^7 \text{m/s}\]
-\[P = 2\pi \frac{r_{wd}}{v_{rot}}\]
-\[\boxed{P \approx 1.652\text{s}}\]
+\[\boxed{v_{rot} \approx 1.991\times 10^7 \text{m/s}}\]
+
 
 \subsubsection{Breakup Speed}
 Given \dots

@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{theta\PYGZus{}snr} \PYG{o}{=} \PYG{l+m+mf}{1.2} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{arcmin} \PYG{c+c1}{\PYGZsh{}angular diam}
+\PYG{n}{V\PYGZus{}snr} \PYG{o}{=} \PYG{l+m+mi}{14000} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{km} \PYG{o}{/} \PYG{n}{u}\PYG{o}{.}\PYG{n}{s}
+\PYG{n}{d\PYGZus{}snr} \PYG{o}{=} \PYG{l+m+mf}{8.5} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{kpc}
+
+\PYG{n}{R\PYGZus{}snr} \PYG{o}{=} \PYG{l+m+mf}{.5} \PYG{o}{*} \PYG{p}{(}\PYG{n}{theta\PYGZus{}snr} \PYG{o}{*} \PYG{n}{d\PYGZus{}snr}\PYG{p}{)} \PYG{o}{/} \PYG{n}{u}\PYG{o}{.}\PYG{n}{rad}
+\PYG{n}{t\PYGZus{}0} \PYG{o}{=} \PYG{n}{R\PYGZus{}snr} \PYG{o}{/} \PYG{n}{V\PYGZus{}snr}
+\end{MintedVerbatim}

@@ -157,23 +157,32 @@ We find \dots
 \subsection{The nature of pulsars}
 \subsubsection{Orbiting WDs}
 Given\dots
-\[P^2 = \frac{4\pi^2}{G(m_1 + m_2)}\]
+\[P^2 = \frac{4\pi^2}{G(m_1 + m_2)} a^3 \]
 \[M_{wd} = .7M_\odot, \qquad r_{wd} = 7 \times 10^6 \text{m}, \qquad P_{wd} = 1.337 \text{s}\]
 
 We find that \dots
-\[a = \left(\frac{(p_{wd}^2)(2GM_{wd})}{r\pi^2}\right)^{1/3}\]
+\[a = \left(\frac{(P_{wd}^2)(2GM_{wd})}{4\pi^2}\right)^{1/3}\]
 \[\boxed{a \approx 2\times 10^6 \text{m}}\]
 \subsubsection{Is this possible?}
 No, this is not possible. This is because \(\boxed{a < r_{wd}}\), meaning that the WDs semimajor axis would be literally within each other, and thus they would have to be merged. 
 
 \subsubsection{WD Period}
 Given \dots
-\[v_{rot}= \frac{2\pi R}{P} \rightarrow P = \frac{2\pi R}{v_{rot}}\]
-\[v_{rot}(P,M) \approx .1c\left(\frac{P}{1s}\right)^{-1}\left(\frac{M}{.7M_\odot}\right)^{-1/3} \]
-\[P = 1.337\text{s} \qquad M = .7\text{M}_\odot\]
-We find that \dots
+\[v_{rot}= \frac{2\pi R}{P}\]
+\[R \approx .01R_\odot \left(\frac{M}{.7M_\odot}\right)^{-1/3}\]
 
-\[\boxed{v_{rot} \approx 1.991\times 10^7 \text{m/s}}\]
+We find \dots
+\[v_{rot}= \frac{2\pi .01R_\odot \left(\frac{M}{.7M_\odot}\right)^{-1/3}}{P}\]
+\[v_{rot}= \frac{2\pi \times  .01R_\odot}{\text{s}} \left(\frac{P}{1\text{s}}\right)^{-1}\left(\frac{M}{.7M_\odot}\right)^{-1/3}\]
+\[\frac{2\pi \times 0.1R_\odot}{c} \approx .145\]
+And \dots
+
+\[\boxed{.145c\left(\frac{P}{1s}\right)^{-1}\left(\frac{M}{.7M_\odot}\right)^{-1/3} \approx .1c\left(\frac{P}{1s}\right)^{-1}\left(\frac{M}{.7M_\odot}\right)^{-1/3} }\]
+
+% \[P = 1.337\text{s} \qquad M = .7\text{M}_\odot\]
+% We find that \dots
+
+% \[\boxed{v_{rot} \approx 1.991\times 10^7 \text{m/s}}\]
 
 
 \subsubsection{Breakup Speed}
@@ -186,6 +195,18 @@ We find \dots
 
 \[\boxed{v = \sqrt{\frac{GM}{R}}}\]
 \subsubsection{Breakup speed from alternative function}
+Given \dots
+\[v = \sqrt{\frac{GM}{R}}, \qquad  R \approx .01R_\odot \left(\frac{M}{.7M_\odot}\right)^{-1/3}\]
+We find \dots
+\[v = \sqrt{\frac{GM}{.01R_\odot \left(\frac{M}{.7M_\odot}\right)^{-1/3}}}\]
+\[v = \sqrt{\frac{GM}{.01R_\odot}} \sqrt{\left(\frac{M}{.7M_\odot}\right)^{1/3}}\]
+
+\[v = \sqrt{\frac{G}{.01R_\odot}} \sqrt{.7M_\odot} \frac{\sqrt{M}}{\sqrt{.7M\odot}}\left(\frac{M}{.7M_\odot}\right)^{1/6}\]
+
+\[\sqrt{\frac{G}{.01R_\odot}} \sqrt{.7M_\odot}/c \approx 0.0121891c\]
+
+\[\boxed{v_{crit} \approx 0.0121891C \left(\frac{M}{.7M_\odot}\right)^{2/3} \approx .01c \left(\frac{M}{.7M_\odot}\right)^{2/3}}\]
+\noindent \textbf{\large OR}
 Given\dots
 \[v_{crit \textbf{A}} = \sqrt{\frac{GM_{wd}}{r_{wd}}} \qquad v_{crit \textbf{B}}\approx .01c \left(\frac{M}{.7M_\odot}\right)^{2/3}\]
 \[M_{wd} = .7M_\odot, \qquad r_{wd} = 7 \times 10^6 \text{m}\]
@@ -198,13 +219,24 @@ No shot\dots This is because \(\boxed{v_{rot} > v_{crit}}\), meaning that a WD r
 
 \subsubsection{What if it was a NS?}
 Given \dots
+\[R = 11\text{km} \left(\frac{M_{ns}}{1.4M_\odot}\right)^{-1/3}\]
+\[v_{rot}= \frac{2\pi R}{P}\]
 
-\[P = 2\pi \frac{r_{NS}}{v_{rot}}\]
+
 \[v_{crit} = \sqrt{\frac{GM_{NS}}{r_{NS}}}\]
 \[M_{ns} = 1.4 M_\odot, \qquad r_{NS} = 10\text{km}\]
 We find\dots
-\[\boxed{v_{rot} \approx 4.7 \times 10^{4}\text{m/s} }\]
-\[\boxed{v_{crit} \approx 1.36 \times 10^{8} \text{m/s}}\]
+\[v_{rot}= \frac{2\pi 11\text{km} \left(\frac{M_{ns}}{1.4M_\odot}\right)^{-1/3}}{P} \boxed{\approx 51694.1 \text{m/s}}\]
+% \[v_{rot}= P^{-1} \times {2\pi 11\text{km} \left(\frac{M_{ns}}{1.4M_\odot}\right)^{-1/3}} = \]
+
+\[v_{crit} = \sqrt{\frac{GM_{NS}}{11\text{km} \left(\frac{M_{ns}}{1.4M_\odot}\right)^{-1/3}}} \boxed{ \approx 1.29964 \times 10^8 \text{m/s} }\]
+
+% \[v_{crit} = \sqrt{\frac{GM_{NS}}{11\text{km} \frac{M_{ns}}{1.4M_\odot}^{-1/3}}}\]
+
+
+
+% \[\boxed{v_{rot} \approx 4.7 \times 10^{4}\text{m/s} }\]
+% \[\boxed{v_{crit} \approx 1.36 \times 10^{8} \text{m/s}}\]
 
 This means that a NS spinning with that rate \textit{does} make sense, this is because \(\boxed{ v_{rot} < v_{crit}}\), meaning that the NS will \textit{not} break apart, and could have a pulsation period of 1.337s.
 
@@ -215,9 +247,6 @@ Given \dots
 
 We find \dots
 \[M_0 = \frac{v_0^2 r_0}{G}, \qquad M_1 = \frac{v_1^2 r_1}{G}, \qquad M_2 = \frac{v_2^2 r_2}{G}, \qquad M_3 = \frac{v_3^2 r_3}{G}\]
-
-
-    
 
 \begin{center}
     \begin{tabular}{|c|c|c|c|}
@@ -238,7 +267,7 @@ Given\dots
 \[M_{bh} = \frac{4\pi^2a^3}{Gp^2}\] 
 \[a = 960\text{AU}, \qquad p = 15.6\text{yr}\]
 We find \dots
-\[M_{bh} \approx 7.22914 \times 10^{36} \text{kg}\]
+\[\boxed{M_{bh} \approx 7.22914 \times 10^{36} \text{kg}}\]
 \subsubsection{}
 Given\dots
 \[r = a(1\pm e)\]
@@ -257,8 +286,29 @@ Given \dots
 We find \dots
 \[\boxed{d_{rl} \approx 3.842 \times 10^{11}\text{m}}\]
 \[ \frac{r_p}{d} \approx 50\]
-This star is currently \textit{not} in danger of TDe, this is because \(\boxed{d_{pe} > d_{rl}}\), meaning it doesn't come within the BHs RL, and thus is not at risk.
+This star is currently \textit{not} in danger of becoming a TDe, this is because \(\boxed{d_{pe} > d_{rl}}\), meaning it doesn't come within the BHs RL, and thus is not at risk.
 
+\subsection{Extra Credit}
+Given\dots
+\[A = - \frac{R_0}{2}\frac{d\omega}{dR}, R = R_0\]
+\[2 = \frac{(-\frac{R_0}{2} * \frac{d\omega}{dR}) -(A-\omega_0)}{(\frac{R_0}{2} + \frac{d\omega}{dr})}\]\
+\[v^2 = \frac{GM}{r} \rightarrow w_0 =  \sqrt{\frac{GM}{r^2}}\]
+We find \dots
 
+\[2 = \frac{\omega_0}{-R_0 \frac{d\omega}{dR} -\omega_0}\]
+\[2 = \frac{\sqrt{\frac{GM}{r^2}}}{-R_0 \frac{d\omega}{dR} -\sqrt{\frac{GM}{r^2}}}\]
+
+\[2(-R_0 \frac{d\omega}{dR} -\sqrt{\frac{GM}{r^2}})= \sqrt{\frac{GM}{r^2}}\]
+\[\frac{3\sqrt{GM}}{r} = -2R_0 \frac{d\omega}{dR}\]
+\[\frac{d\omega}{dR} \omega = \frac{\sqrt{GM}}{R^{3/2}}\frac{d\omega}{dr}\]
+\[\frac{d\omega}{dR} = \frac{3}{2} R_0^{-5/3}\sqrt{GM}\]
+
+\[\frac{3\sqrt{GM}}{R_0^{2/3}} = -2\frac{3}{2}\left(R_0\right)(\sqrt{GM}) (R_0^{-5/3})\]
+
+\[\frac{\cancel{3}\cancel{\sqrt{GM}}}{\cancel{R_0^{2/3}}} = -\cancel{2}\frac{\cancel{3}}{\cancel{2}}\left(\cancel{R_0}\right)(\cancel{\sqrt{GM}}) (\cancel{R_0^{-5/3}})\]
+
+\[1 = 1\]
+
+Thus, this equation must be true.
 
 \end{document}

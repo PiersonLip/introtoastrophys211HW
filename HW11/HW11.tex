@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{cancel}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{minted}       
+\usepackage{verbatim}    
+\usepackage{siunitx}
+\usepackage{titlesec}
+
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{arrows.meta,calc}
+
+% --- visual style for the cell ---
+\newmdenv[
+  backgroundcolor=gray!5,
+  linecolor=gray!50,
+  roundcorner=5pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt
+]{codecell}
+
+\newif\ifcodefast
+\codefasttrue % change whether to write code fancy or just plain
+
+\ifcodefast
+  % ---------- FAST MODE ----------
+  \newenvironment{codeblockPython}
+    {\VerbatimEnvironment
+     \begin{codecell}
+     \begin{Verbatim}}
+    {\end{Verbatim}
+     \end{codecell}}
+\else
+  % ---------- FULL MINTED MODE ----------
+  \newenvironment{codeblockPython}
+    {\VerbatimEnvironment
+     \begin{codecell}
+     \begin{minted}{python3}}
+    {\end{minted}
+     \end{codecell}}
+\fi
+
+\geometry{a4paper}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+\DeclareSIUnit{\Msun}{M_{\odot}}
+\DeclareSIUnit{\Mpc}{Mpc}
+
+% Number \paragraph as i, ii, iii, ...
+\renewcommand{\theparagraph}{\large \roman{paragraph}) \\}
+\setcounter{secnumdepth}{4}
+
+
+\titleformat{\subsubsubsection}
+  {\normalsize\bfseries}
+  {\thesubsubsubsection}
+  {1em}
+  {}
+  
+
+\def\hwNUM{11}
+
+
+\title{Astro HW \hwNUM}
+\author{Pierson Lipschultz}
+
+\begin{document}
+\maketitle
+\setcounter{section}{\hwNUM}
+
+\subsection{}
+
+\subsubsection{}
+
+\subsection{Spiral galaxies - Tracing the Matter}
+\subsubsection{}
+Given\dots
+\[v_{esc} = \sqrt{\frac{2GM}{R}}\]
+\[v_{esc} = 500 \text{km} \text{s}^{-1} \qquad 8.5 \text{kpc}\]
+We find that
+\dots
+\[v_{esc} = \frac{\sqrt{2GM}}{\sqrt{R}}\]
+\[\frac{v_{esc}\sqrt{R}}{\sqrt{2G}} = \sqrt{M}\]
+\[M = \SI{2.470e+11}{\Msun}\]
+
+\subsubsection{}
+\paragraph{}
+
+Given \dots
+\[M_V = -2.76 \log_{10}\left(\frac{P}{10\si{\day}}\right) - 4.16\]
+\[m_V = 18.9, \qquad P = 31.47 \si{\day}\]
+\[m - M = 5 \log_{10}\!\left(\frac{d}{10\,\text{pc}}\right) \rightarrow d = 10 \text{exp}\left({\,\frac{m - M + 5}{5}}\right) \,\text{pc}\]
+We find \dots
+
+\[\boxed{M_v = -5.534, \qquad d = \SI{7.706e-01}{\Mpc}}\]
+
+\paragraph{}
+\[\boxed{53.9 \si{\km /\s}}\]
+
+\paragraph{}
+\[\boxed{g = \SI{3.914e-13}{\km/\s}}\]
+
+\paragraph{}
+Given \dots
+\[g = GM/R^2\]
+\[g_{m31} = GM_{m31}/R^2, \qquad g_{MW} = GM_{Mw}/R^2\]
+\[R = 7.706 \times 10^{-1}\text{Mpc}\]
+We can find \dots
+\[g_{m31} = 2g_{MW}\]
+\[3.914 \times 10^{-13}  = 2 GM_{MW}/R^2\]
+\[\frac{(3.914 \times 10^{-13}) R^2 }{2G}  = M_{MW}\]
+\[M_{MW} = \SI{8.339e+11}{\Msun}\]
+
+\subsection{}
+
+\end{document}

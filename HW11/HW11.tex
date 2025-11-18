@@ -70,7 +70,7 @@
 % Number \paragraph as i, ii, iii, ...
 \renewcommand{\theparagraph}{\large \roman{paragraph}) \\}
 \setcounter{secnumdepth}{4}
-
+\setlength{\parindent}{0pt}
 
 \titleformat{\subsubsubsection}
   {\normalsize\bfseries}
@@ -95,11 +95,12 @@
 
 \subsection{Spiral galaxies - Tracing the Matter}
 \subsubsection{}
+
 Given\dots
 \[v_{esc} = \sqrt{\frac{2GM}{R}}\]
 \[v_{esc} = 500 \text{km} \text{s}^{-1} \qquad 8.5 \text{kpc}\]
-We find that
-\dots
+
+We find that\dots
 \[v_{esc} = \frac{\sqrt{2GM}}{\sqrt{R}}\]
 \[\frac{v_{esc}\sqrt{R}}{\sqrt{2G}} = \sqrt{M}\]
 \[M = \SI{2.470e+11}{\Msun}\]
@@ -111,21 +112,33 @@ Given \dots
 \[M_V = -2.76 \log_{10}\left(\frac{P}{10\si{\day}}\right) - 4.16\]
 \[m_V = 18.9, \qquad P = 31.47 \si{\day}\]
 \[m - M = 5 \log_{10}\!\left(\frac{d}{10\,\text{pc}}\right) \rightarrow d = 10 \text{exp}\left({\,\frac{m - M + 5}{5}}\right) \,\text{pc}\]
-We find \dots
 
+
+We find \dots
 \[\boxed{M_v = -5.534, \qquad d = \SI{7.706e-01}{\Mpc}}\]
 
 \paragraph{}
+Given \dots
+\[v = H_0 d\]
+\[d = d = \SI{7.706e-01}{\Mpc}\]
+We find \dots
+
 \[\boxed{53.9 \si{\km /\s}}\]
 
 \paragraph{}
+Given \dots
+\[\frac{\Delta v}{\Delta T} = a \]
+\[v_{init} = 53.9 \si{\km /\s}, \qquad v_{final} = -119 \text{km/s}, \qquad \Delta v = v_{final} - v_{init}  \qquad \Delta T = 14 \text{Gyr}\]
+
 \[\boxed{g = \SI{3.914e-13}{\km/\s}}\]
 
 \paragraph{}
+
 Given \dots
 \[g = GM/R^2\]
 \[g_{M31} = GM_{m31}/R^2, \qquad g_{MW} = GM_{Mw}/R^2\]
 \[R = 7.706 \times 10^{-1}\text{Mpc}\]
+
 We can find \dots
 \[g_{M31} = 2g_{MW}\]
 \[3.914 \times 10^{-13}  = 2 GM_{MW}/R^2\]
@@ -134,19 +147,24 @@ We can find \dots
 
 \subsection{}
 \subsubsection{}
+
 Given \dots
 \[R = D\theta\]
 \[D = \SI{16.8}{\Mpc}, \qquad \theta = .1''\]
+
 We find\dots
 \[R = 8.144\text{pc}\]
 \subsubsection{}
+
 From figure \dots
 \[-.1'' = \SI{1350}{\km/\s}\]
 \[+.1'' = \SI{650}{\km/\s}\]
+
 We find \dots
 \[c_{vel} = \SI{350}{\km/\s}\]
 
 \subsubsection{}
+
 Given \dots
 
 Assuming circular orbit \dots
@@ -159,10 +177,14 @@ We find \dots
 
 \subsection{Redshifts and the Hubble Law}
 \subsubsection{}
+
 Given \dots
+
 \[Z = \frac{\lambda_{obsv} - \lambda_{rest}}{\lambda_{rest}}\]
 \[\lambda_{rest} = \SI{486.135}{\nm}, \qquad \lambda_{obsv} = \SI{497.97}{\nm} \]
+
 We find \dots
+
 \[Z = .0023\]
 
 \subsubsection{}
@@ -170,9 +192,13 @@ Given \dots
 \[m - M = 5 \log(d/10 \text{pc})\]
 \[v = H_0 d, \qquad z \simeq \frac{v}{c}, \qquad  \rightarrow \frac{cz}{H_0} = d\]
 \[H_0 = \SI{70}{\km /\s /\Mpc}\]
+
 With the goal of deriving \dots
+
 \[m - M = 5\log(z) + 43.2\]
+
 We can do \dots
+
 \[m - M = 5\log_{10}\!\left(\frac{d}{10\,\mathrm{pc}}\right)\]
 
 \[m - M = 5\log_{10}\!\left(\frac{\frac{cz}{H_0}}{10\,\mathrm{pc}}\right)\]
@@ -183,19 +209,22 @@ We can do \dots
 
 
 \[5\log_{10}\!\left(\frac{c}{H_0}\frac{10^{5}}{\text{Mpc}}\right) \approx 43.15\]
+
 Hence \dots
 
 \[\boxed{m - M = 5\log_{10}(z) + 43.2}\]
 
-% \[z = v/c\]
-% \[v = zc\]
 
-% \[\frac{zc}{\text{km/s}} = 70\text{Mpc}\]
-% \[\frac{zc}{70\text{km/s}} = \text{Mpc}\]
+\subsubsection{}
+Given \dots
+% \[m - M = 5 \log(d/10 \text{pc})\]
 
-% \[H_0 = \SI{70}{\km /\s /\Mpc}\]
+\[m - M = 5\log_{10}(z) + 43.2\]
+\[Z = .0023, \qquad mV = 12.7\]
 
-% \[M = 5 \log\left(\frac{zc}{70\text{km/s}}\text{Mpc}/.00001 \text{Mpc}\right) + m\]
+We find \dots
+\[M_v = -22.379825\]
 
-
+\subsubsection{}
+It is more likely to be a bright spiral galaxy, as bright spirals have a absolute magnitude of \(\approx -20\).
 \end{document}

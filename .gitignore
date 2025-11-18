@@ -5,3 +5,4 @@
 *.auxlock
 *.listing
 /Testing
+*.html

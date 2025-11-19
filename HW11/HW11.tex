@@ -65,6 +65,7 @@
 \geometry{a4paper}
 \renewcommand{\thesubsubsection}{\alph{subsubsection})}
 \DeclareSIUnit{\Msun}{M_{\odot}}
+\DeclareSIUnit{\Lsun}{L_{\odot}}
 \DeclareSIUnit{\Mpc}{Mpc}
 
 % Number \paragraph as i, ii, iii, ...
@@ -89,9 +90,65 @@
 \maketitle
 \setcounter{section}{\hwNUM}
 
+
+
+
 \subsection{}
 
+\subsubsection{Spiral galaxies - Tracing the Light}
+\[L(r) = \int_{0}^{r} 2 \pi s \Sigma (s)ds = 2 \pi h^2_r \left[1 - \left(\frac{r}{1+hr}\right)e^{-r/h_r}\right]\]
+
+\[L(r) = \int_{0}^{R} 2 \pi r \left[\Sigma_0 exp(-r/h_r)\right]dr \]
+
+
+\[L(r) = 2\pi \Sigma_0 \int_{0}^{R} r \left[exp(-r/h_r)\right] dr \]
+
+\[x = r/h_r, \quad xh_r =r, \quad dxh_r = dr\]
+
+\[ = 2\pi \Sigma_0 h_r^2 \int_{0}^{R}xe^{-x} dr \]
+
+\[ = 2\pi \Sigma_0 h_r^2\left[_0^R - (r/h_r + 1)e^{-r/h_r} + C \right]\]
+\[ L(r) = 2\pi \Sigma_0 h_r^2\left[1 - (R/h_r +1 ) \right]e^{-R/h_r}\]
+
+
 \subsubsection{}
+Given \dots
+\[\Sigma = 36 L_\odot \text{pc}^{-2}, \qquad h_r = 4\text{kpc}, \qquad R_0 = 8.5\text{kpc}\]
+
+\[\Sigma = \Sigma_0 \text{exp}(-r/h_r)\]
+We find \dots
+\[\Sigma_ 0 = 301.42 L_\odot \text{pc}^{-2}\]
+
+\subsubsection{}
+
+\[ L(r) = 2\pi \Sigma_0 h_r^2 1 - \left[\frac{(R/h_r +1 )}{e^{R/h_r}} \right]\]
+
+\[ L(R) = 2\pi \Sigma_0 h_r^2 \lim_{R \rightarrow \infty} \left[\frac{(R/h_r )}{e^{R/h_r}} \right]\]
+
+Apply L'hoptials \dots 
+
+\[ L(\infty) = 2\pi \Sigma_0 h_r^2 \lim_{R \rightarrow \infty} \left[\frac{(1/h_r )}{Re^{R/h_r}} \right]\]
+
+\[ L(\infty) = 2\pi \Sigma_0 h_r^2\]
+
+\[\boxed{L(\infty) \approx \SI{3.030e+10}{\Lsun}}\]
+
+\subsubsection{}
+Given\dots 
+\[L/3 = M_{mw}, \qquad L = \SI{3.030e+10}{\Lsun}\]
+We find \dots
+\[\boxed{M_{mw} \approx\SI{1.010e+10}{\Msun}}\]
+
+\subsubsection{}
+Given \dots
+\[L(R_0)/L(\infty), \qquad L(\infty) = \SI{3.030e+10}{\Lsun}\]
+\[ L(r) = 2\pi \Sigma_0 h_r^2\left[1 - (R/h_r +1 ) \right]e^{-R/h_r}\]
+
+We find \dots
+\[L(R_0) = \SI{1.899e+10}{\Lsun} \text{pc}^{-2}\]
+\[L(R_0)/L(\infty) = 62\% \]
+
+
 
 \subsection{Spiral galaxies - Tracing the Matter}
 \subsubsection{}
@@ -130,20 +187,23 @@ Given \dots
 \[\frac{\Delta v}{\Delta T} = a \]
 \[v_{init} = 53.9 \si{\km /\s}, \qquad v_{final} = -119 \text{km/s}, \qquad \Delta v = v_{final} - v_{init}  \qquad \Delta T = 14 \text{Gyr}\]
 
-\[\boxed{g = \SI{3.914e-13}{\km/\s}}\]
+\[\boxed{g = \SI{-3.914e-13}{\m/\s}}\]
+
 
 \paragraph{}
 
 Given \dots
-\[g = GM/R^2\]
+\[a = GM/R^2\]
 \[g_{M31} = GM_{m31}/R^2, \qquad g_{MW} = GM_{Mw}/R^2\]
 \[R = 7.706 \times 10^{-1}\text{Mpc}\]
+\[a = a_m + a_{m31}\]
 
 We can find \dots
-\[g_{M31} = 2g_{MW}\]
-\[3.914 \times 10^{-13}  = 2 GM_{MW}/R^2\]
-\[\frac{(3.914 \times 10^{-13}) R^2 }{2G}  = M_{MW}\]
-\[M_{MW} = \SI{8.339e+11}{\Msun}\]
+
+\[\cancel{-}3.914 \times 10^{-13}  = \cancel{-}3 GM_{MW}/R^2\]
+\[\frac{(3.914 \times 10^{-13}) R^2 }{3G}  = M_{MW}\]
+\[M_{MW} = \SI{ 5.559e+11}{\Msun}\]
+
 
 \subsection{}
 \subsubsection{}
@@ -154,14 +214,15 @@ Given \dots
 
 We find\dots
 \[R = 8.144\text{pc}\]
+
 \subsubsection{}
 
 From figure \dots
-\[-.1'' = \SI{1350}{\km/\s}\]
+\[-.1'' = \SI{1780}{\km/\s}\]
 \[+.1'' = \SI{650}{\km/\s}\]
 
 We find \dots
-\[c_{vel} = \SI{350}{\km/\s}\]
+\[c_{vel} = \SI{1215}{\km/\s}\]
 
 \subsubsection{}
 
@@ -226,5 +287,20 @@ We find \dots
 \[M_v = -22.379825\]
 
 \subsubsection{}
-It is more likely to be a bright spiral galaxy, as bright spirals have a absolute magnitude of \(\approx -20\).
+It is more likely to be an elliptical galaxy, as they have a absolute magnitude of \(\approx -22\)
+
+
+
+\subsection{Extra Credit}
+\subsubsection{}
+It is a spiral, it has new, `infantile', stars, with the nebulae becoming structured.  
+\subsubsection{}
+Given \dots
+\[V = H_0 * D\]
+\[D = 2 ,000 ,000\text{mi}\]
+We find \dots
+\[V = \SI{2.684e-13}{\km /\s}\]
+This means that it is barely moving away from us, whereas the poem says that it is receding `At several million miles per sec', thus that the author is taking artistic librety. 
+\subsubsection{}
+It is probably before 1929, because Hubble discovered the proper recession then. 
 \end{document}

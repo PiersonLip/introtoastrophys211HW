@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{cancel}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{minted}       
+\usepackage{verbatim}    
+
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{arrows.meta,calc}
+
+% --- visual style for the cell ---
+\newmdenv[
+  backgroundcolor=gray!5,
+  linecolor=gray!50,
+  roundcorner=5pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt
+]{codecell}
+
+\newif\ifcodefast
+\codefasttrue % change whether to write code fancy or just plain
+
+\ifcodefast
+  % ---------- FAST MODE ----------
+  \newenvironment{codeblockPython}
+    {\VerbatimEnvironment
+     \begin{codecell}
+     \begin{Verbatim}}
+    {\end{Verbatim}
+     \end{codecell}}
+\else
+  % ---------- FULL MINTED MODE ----------
+  \newenvironment{codeblockPython}
+    {\VerbatimEnvironment
+     \begin{codecell}
+     \begin{minted}{python3}}
+    {\end{minted}
+     \end{codecell}}
+\fi
+
+\geometry{a4paper}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+
+\def\hwNUM{12}
+
+
+\title{Astro HW \hwNUM}
+\author{Pierson Lipschultz}
+
+\begin{document}
+\maketitle
+\setcounter{section}{\hwNUM}
+
+\subsection{}
+
+\subsubsection{}
+
+
+\end{document}

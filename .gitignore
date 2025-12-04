@@ -6,3 +6,7 @@
 *.listing
 /Testing
 *.html
+*.bbl
+*.bcf
+*.run.xml
+*.out

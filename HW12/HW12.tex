@@ -20,6 +20,15 @@
 \usepackage{xcolor}
 \usepackage{minted}       
 \usepackage{verbatim}    
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage[
+  backend=biber,
+  sorting=none,
+%   style=mla
+]{biblatex}
+
+\addbibresource{sources.bib} 
 
 \usepgfplotslibrary{external}
 \tikzexternalize
@@ -62,6 +71,12 @@
 
 \geometry{a4paper}
 \renewcommand{\thesubsubsection}{\alph{subsubsection})}
+\setlength{\parindent}{0pt}
+
+\DeclareSIUnit{\Msun}{M_{\odot}}
+\DeclareSIUnit{\Lsun}{L_{\odot}}
+\DeclareSIUnit{\Mpc}{Mpc}
+
 
 \def\hwNUM{12}
 
@@ -73,9 +88,55 @@
 \maketitle
 \setcounter{section}{\hwNUM}
 
-\subsection{}
+\subsection{Eddington luminosity and massive stars}
+
+\subsubsection{}
+Given \dots
+\[L_{\rm Edd} \simeq 3.3\times10^4 \left(\frac{M}{M_\odot}\right) L_\odot\]
+
+\[L \simeq L_\odot \left(\frac{M}{M_\odot}\right)^3\] 
+
+\[L = L_{\rm Edd}, \qquad \text{when disruption occurs}\] 
+
+We can derive \dots 
+\[\Rightarrow\
+L_\odot \left(\frac{M}{M_\odot}\right)^3
+=
+3.3\times10^4 \left(\frac{M}{M_\odot}\right) L_\odot\]
+
+\[\Rightarrow
+\left(\frac{M}{M_\odot}\right)^2 = 3.3\times10^4\]
+
+\[\Rightarrow
+M_{\max} \approx \sqrt{3.3\times10^4}\,M_\odot \approx 1.8\times10^2\,M_\odot
+\]
+
+\subsubsection{}
+This calculated value of \(M_{lim} \approx 1.8 \times 10^2 M_\odot\) is much lower than a considerable amount of observed systems. For example, the current most massive star has a proposed mass of \(346\pm42 M_\odot\)\cite{Keszthelyi_2025}.
+
+\subsection{Accretion disk temperatures}
+\subsubsection{}
+Given \dots 
+\[T \approx \left[\frac{GM}{2\sigma_{SB}r^2 }\Sigma v\right]^{1/4}\]
+\[\dot{M} = 2\pi r\Sigma(r)v(r)\]
+
+We find \dots 
+\[\dot{M} = 2\pi r\Sigma(r)v(r)\]
+\[\Sigma(r)v = \frac{\dot{M}}{r2\pi}\]
+\[T \approx \left[\frac{GM}{2\sigma_{SB}r^2 }\frac{\dot{M}}{r2\pi}\right]^{1/4}\]
+\[T \approx \left[\frac{GM\dot{M}}{4\pi\sigma_{SB}r^2 }\right]^{1/4}\]
+
+\subsubsection{}
+Given \dots
+\[T \approx \left[\frac{GM\dot{M}}{4\pi\sigma_{SB}r^2 }\right]^{1/4}\]
+\[L = \eta \dot{M}c^2\]
+\[L = E_L, \quad \eta \sim .1, \quad r = \frac{6GM}{c^2}\]
 
 \subsubsection{}
 
+\printbibliography[
+heading=bibintoc,
+title={\centering Sources}
+]
 
 \end{document}

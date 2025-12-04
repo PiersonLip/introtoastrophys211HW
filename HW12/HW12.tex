@@ -21,6 +21,7 @@
 \usepackage{minted}       
 \usepackage{verbatim}    
 \usepackage{siunitx}
+<<<<<<< HEAD
 \usepackage{hyperref}
 \usepackage[
   backend=biber,
@@ -29,6 +30,8 @@
 ]{biblatex}
 
 \addbibresource{sources.bib} 
+=======
+>>>>>>> 425eb936d2b5f33092f0176f5cf708406a54d0a4
 
 \usepgfplotslibrary{external}
 \tikzexternalize
@@ -72,14 +75,18 @@
 \geometry{a4paper}
 \renewcommand{\thesubsubsection}{\alph{subsubsection})}
 \setlength{\parindent}{0pt}
+<<<<<<< HEAD
 
 \DeclareSIUnit{\Msun}{M_{\odot}}
 \DeclareSIUnit{\Lsun}{L_{\odot}}
 \DeclareSIUnit{\Mpc}{Mpc}
 
 
+=======
+>>>>>>> 425eb936d2b5f33092f0176f5cf708406a54d0a4
 \def\hwNUM{12}
-
+\DeclareSIUnit{\Msun}{M_{\odot}}
+\DeclareSIUnit{\Lsun}{L_{\odot}}
 
 \title{Astro HW \hwNUM}
 \author{Pierson Lipschultz}
@@ -133,10 +140,95 @@ Given \dots
 \[L = E_L, \quad \eta \sim .1, \quad r = \frac{6GM}{c^2}\]
 
 \subsubsection{}
+\[L = 1.2 L_\odot \left(\frac{M}{M_\odot}\right)^{3.92}\]
+\[L_{edd} = \frac{4\pi GM_p c}{\sigma_e}\]
+\[\sigma_e = 6.55 \times 10^{-29} m^2, \quad m_p = 1.67 \times 10 ^{-27}kg\]
 
 \printbibliography[
 heading=bibintoc,
 title={\centering Sources}
 ]
+\[\boxed{M_{max} = \SI{3.514e+01}{\Lsun}}\]
+
+
+\subsection{Accretion disk temperatures}
+\subsubsection{}
+
+\subsubsection{}
+Given \dots 
+
+\[L_e = 4\pi r^2 \sigma_{sb} T^4\]
+\[r = \frac{6GM}{c^2}\]
+\[r \propto M, \quad M \propto L_E \]
+
+We can find \dots
+
+\[L_e = 4\pi \left(\frac{6GM}{c^2}\right)^2 \sigma_{sb} T^4\]
+\begin{center}
+  By proportionality \dots
+\end{center}
+\[\Rightarrow M^2 T^4 \propto M\]
+\[\Rightarrow T^4 \propto \frac{M}{M^2}\]
+\[\boxed{T = M^{-1/4}}\]
+
+\subsubsection{}
+Given \dots 
+\[\dot{M} = \dot{m} \left(\frac{4 \pi GMm_p}{\sigma_e \eta c }\right)\]
+\[\dot{m} = 1 \quad \eta \sim .1  \]
+\[r = \frac{(6GM)}{c^2}\]
+\[T(r) \approx \left[\frac{GM\dot{M}}{4\pi\sigma_{SB}r^3}\right]^{1/4}\]
+We find \dots 
+\[\boxed{T_{4M_\odot} = \SI{1.755e+07}{\kelvin}, \quad T_{10^9M_\odot} = \SI{1.396e+05}{\kelvin}}\]
+
+\subsubsection{}
+We find that they lie in the microwave and radio wave spectrum.
+
+
+\subsection{Stellar close encounters}
+
+\subsubsection{}
+
+\subsubsection{}
+\[t = \frac{1}{n_* (\pi R^2_{eff})}\]
+
+\subsubsection{}
+Divide answer of above by 5
+
+\subsection{Expansion of a Newtonian universe}
+\subsubsection{}
+Given \dots 
+\[\frac{\dot{a}^2}{a^2} = \frac{8\pi G \rho^{c,0}}{3} \frac{1}{a^3}\]
+We can calculate \dots 
+
+\[{\dot{a}^2} = \frac{8\pi G \rho^{c,0}}{3}\frac{1}{a}\]
+\[\frac{8\pi G \rho^{c,0}}{3} = k\]
+\[\dot{a} = \sqrt{\frac{k}{a}} \]
+\[\frac{da}{dt} = \sqrt{\frac{k}{a}}\]
+\[da = \sqrt{\frac{k}{a}} dt\]
+\[\sqrt{a} da = \sqrt{{k}} dt\]
+
+\[\int\sqrt{a} da = \int\sqrt{{k}} dt\]
+
+\[\frac{2}{3} a^{3/2} = t\sqrt{{k}} \]
+\[a = \left(\frac{3}{2} t\sqrt{k}\right)^{2/3}\]
+\[\boxed{a(t) = \left(\frac{3}{2} t\sqrt{\frac{8\pi G \rho_{c,0}}{3}}\right)^{2/3}}\]
+
+
+\subsubsection{}
+
+\subsubsection{}
+Given \dots 
+\[\frac{1}{t_0} = \frac{1}{H_0}\]
+We find \dots 
+\[\boxed{T_{uni}= \SI{13.97}{Gyr}}\]
+
+\subsection{Olbers's paradox again}
+\subsubsection{}
+Given \dots 
+\[n_{wd} = \frac{3H_0^2}{8\pi G }\]
+We find 
+\[\boxed{n_{wd} = \SI{6.613e-57}{/ \m^3}}\]
+
+\subsubsection{}
 
 \end{document}

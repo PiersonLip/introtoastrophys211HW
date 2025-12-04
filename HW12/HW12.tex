@@ -21,7 +21,6 @@
 \usepackage{minted}       
 \usepackage{verbatim}    
 \usepackage{siunitx}
-<<<<<<< HEAD
 \usepackage{hyperref}
 \usepackage[
   backend=biber,
@@ -30,8 +29,6 @@
 ]{biblatex}
 
 \addbibresource{sources.bib} 
-=======
->>>>>>> 425eb936d2b5f33092f0176f5cf708406a54d0a4
 
 \usepgfplotslibrary{external}
 \tikzexternalize
@@ -75,15 +72,12 @@
 \geometry{a4paper}
 \renewcommand{\thesubsubsection}{\alph{subsubsection})}
 \setlength{\parindent}{0pt}
-<<<<<<< HEAD
 
 \DeclareSIUnit{\Msun}{M_{\odot}}
 \DeclareSIUnit{\Lsun}{L_{\odot}}
 \DeclareSIUnit{\Mpc}{Mpc}
 
 
-=======
->>>>>>> 425eb936d2b5f33092f0176f5cf708406a54d0a4
 \def\hwNUM{12}
 \DeclareSIUnit{\Msun}{M_{\odot}}
 \DeclareSIUnit{\Lsun}{L_{\odot}}
@@ -99,27 +93,16 @@
 
 \subsubsection{}
 Given \dots
-\[L_{\rm Edd} \simeq 3.3\times10^4 \left(\frac{M}{M_\odot}\right) L_\odot\]
+\[L = 1.2 L_\odot \left(\frac{M}{M_\odot}\right)^{3.92}\]
+\[L_{edd} = \frac{4\pi GM_p c}{\sigma_e}\]
+\[\sigma_e = 6.55 \times 10^{-29} m^2, \quad m_p = 1.67 \times 10 ^{-27}kg\]
 
-\[L \simeq L_\odot \left(\frac{M}{M_\odot}\right)^3\] 
 
-\[L = L_{\rm Edd}, \qquad \text{when disruption occurs}\] 
+\[\boxed{M_{max} = \SI{3.514e+01}{\Lsun}}\]
 
-We can derive \dots 
-\[\Rightarrow\
-L_\odot \left(\frac{M}{M_\odot}\right)^3
-=
-3.3\times10^4 \left(\frac{M}{M_\odot}\right) L_\odot\]
-
-\[\Rightarrow
-\left(\frac{M}{M_\odot}\right)^2 = 3.3\times10^4\]
-
-\[\Rightarrow
-M_{\max} \approx \sqrt{3.3\times10^4}\,M_\odot \approx 1.8\times10^2\,M_\odot
-\]
 
 \subsubsection{}
-This calculated value of \(M_{lim} \approx 1.8 \times 10^2 M_\odot\) is much lower than a considerable amount of observed systems. For example, the current most massive star has a proposed mass of \(346\pm42 M_\odot\)\cite{Keszthelyi_2025}.
+This calculated value of \({M_{max} = \SI{3.514e+01}{\Lsun}}\) is much lower than a considerable amount of observed systems. For example, the current most massive star has a proposed mass of \(346\pm42 M_\odot\)\cite{Keszthelyi_2025}. All the most massive stars are Wolf-Rayet stars, meaning that they are so massive that they start to sherd their exterior hydrogen envelopes.
 
 \subsection{Accretion disk temperatures}
 \subsubsection{}
@@ -133,26 +116,6 @@ We find \dots
 \[T \approx \left[\frac{GM}{2\sigma_{SB}r^2 }\frac{\dot{M}}{r2\pi}\right]^{1/4}\]
 \[T \approx \left[\frac{GM\dot{M}}{4\pi\sigma_{SB}r^2 }\right]^{1/4}\]
 
-\subsubsection{}
-Given \dots
-\[T \approx \left[\frac{GM\dot{M}}{4\pi\sigma_{SB}r^2 }\right]^{1/4}\]
-\[L = \eta \dot{M}c^2\]
-\[L = E_L, \quad \eta \sim .1, \quad r = \frac{6GM}{c^2}\]
-
-\subsubsection{}
-\[L = 1.2 L_\odot \left(\frac{M}{M_\odot}\right)^{3.92}\]
-\[L_{edd} = \frac{4\pi GM_p c}{\sigma_e}\]
-\[\sigma_e = 6.55 \times 10^{-29} m^2, \quad m_p = 1.67 \times 10 ^{-27}kg\]
-
-\printbibliography[
-heading=bibintoc,
-title={\centering Sources}
-]
-\[\boxed{M_{max} = \SI{3.514e+01}{\Lsun}}\]
-
-
-\subsection{Accretion disk temperatures}
-\subsubsection{}
 
 \subsubsection{}
 Given \dots 
@@ -229,6 +192,12 @@ Given \dots
 We find 
 \[\boxed{n_{wd} = \SI{6.613e-57}{/ \m^3}}\]
 
+
 \subsubsection{}
+
+\printbibliography[
+heading=bibintoc,
+title={\centering Sources}
+]
 
 \end{document}

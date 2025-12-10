@@ -1,0 +1,421 @@
+\documentclass{article}
+\usepackage{cancel}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{minted}       
+\usepackage{verbatim}    
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+
+\geometry{a4paper}
+
+
+
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{arrows.meta,calc}
+
+% --- visual style for the cell ---
+\newmdenv[
+  backgroundcolor=gray!5,
+  linecolor=gray!50,
+  roundcorner=5pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt
+]{codecell}
+
+\newif\ifcodefast
+\codefasttrue % change whether to write code fancy or just plain
+
+\ifcodefast
+  % ---------- FAST MODE ----------
+  \newenvironment{codeblockPython}
+    {\VerbatimEnvironment
+     \begin{codecell}
+     \begin{Verbatim}}
+    {\end{Verbatim}
+     \end{codecell}}
+\else
+  % ---------- FULL MINTED MODE ----------
+  \newenvironment{codeblockPython}
+    {\VerbatimEnvironment
+     \begin{codecell}
+     \begin{minted}{python3}}
+    {\end{minted}
+     \end{codecell}}
+\fi
+
+\geometry{a4paper}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+\setlength{\parindent}{0pt}
+\DeclareSIUnit{\Msun}{M_{\odot}}
+\DeclareSIUnit{\Lsun}{L_{\odot}}
+\DeclareSIUnit{\Mpc}{Mpc}
+
+
+\def\hwNUM{13}
+
+
+\title{Astro210 HW \hwNUM}
+\author{Pierson Lipschultz}
+
+
+\begin{document}
+\maketitle
+\setcounter{section}{\hwNUM}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{.0pt}  
+% \fancyhead[L]{{\textbf{Pierson Lipschultz Astro 210 HW \hwNUM, {\today}}}}
+\fancyfoot[C]{\thepage}
+
+
+\subsection{}
+
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+
+\[E(t) = \frac{4\sigma_{SB}}{c}\left(T^4V\right), quad P(t) = \frac{4\sigma_{SB}}{3c}T^4\]
+
+We find \dots
+\[ \frac{dE}{dt}\frac{4\sigma_{SB}}{c}\left(T^4V\right) = \frac{4\sigma_{SB}}{c}\left(4T^3V\frac{dT}{dt} + T^4 \frac{dV}{dt}\right)\]
+
+\[\boxed{\frac{4\sigma_{SB}}{c}\left(4T^3V\frac{dT}{dt} + T^4 \frac{dV}{dt}\right) = -\frac{4\sigma_{SB}}{3c}T^4 \frac{dV}{dt}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[\frac{4\sigma_{SB}}{c}\left(4T^3V\frac{dT}{dt} + T^4 \frac{dV}{dt}\right) = -\frac{4\sigma_{SB}}{3c}T^4 \frac{dV}{dt}\]
+
+We find \dots
+\[\cancel{\frac{4\sigma_{SB}}{c}}\left(4T^3V\frac{dT}{dt} + T^4 \frac{dV}{dt}\right) = -\cancel{\frac{4\sigma_{SB}}{c}}T^4 \frac{1}{3}\frac{dV}{dt}\]
+
+\[\left(4\frac{\cancel{T^{3}}}{T^{\cancel{4}}}V\frac{dT}{dt} + \cancel{T^4} \frac{dV}{dt}\right) = -\cancel{T^4} \frac{1}{3}\frac{dV}{dt}\]
+
+
+\[4\frac{1}{T}V\frac{dT}{dt} = -\frac{1}{3}\frac{dV}{dt} - \frac{dV}{dt}\]
+
+
+\[\cancel{4}\frac{1}{T}V\frac{dT}{dt} = -\frac{\cancel{4}}{3}\frac{dV}{dt}\]
+
+\[\frac{1}{T}V\frac{dT}{dt} = -\frac{1}{3}\frac{dV}{dt}\]
+
+\[\boxed{\frac{1}{T}\frac{dT}{dt} = -\frac{1}{3V}\frac{dV}{dt}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[\frac{1}{T}\frac{dT}{dt} = -\frac{1}{3V}\frac{dV}{dt}, \quad V(t) \propto a(t)^3\]
+We find \dots 
+
+\[\frac{dV}{dt} = 3a^2 \frac{ da}{dt}\]
+
+\[\frac{1}{T}\frac{dT}{dt} = -\frac{1}{a\cancel{^3}}\cancel{a^2}\frac{da}{dt}\]
+
+\[\boxed{\frac{1}{T}\frac{dT}{dt} = -\frac{1}{a}\frac{da}{dt}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[{\frac{1}{T}\frac{dT}{dt} = -\frac{1}{a}\frac{da}{dt}}\]
+We find \dots
+\[\frac{1}{T} =\ln(T)dT, \quad \frac{1}{a} =\ln(a)da\]
+
+\[\boxed{\frac{d}{dt} \ln(T) = \ln(a)\frac{d}{dt}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[\lambda = \frac{2900 \mu \text{m}}{T}\]
+
+\[T = \frac{2900 \mu \text{m}}{\lambda}\]
+
+We find \dots 
+
+\[{\frac{d}{dt} \ln\left(\frac{2900 \mu \text{m}}{\lambda}\right) = \ln(a)\frac{d}{dt}}\]
+
+\[{\frac{d}{dt} \ln({2900 \mu \text{m}}) - \ln({\lambda}) = \ln(a)\frac{d}{dt}}\]
+\[\boxed{\ln(\lambda) \propto \ln(a)}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+Given \dots 
+\[\frac{1}{2} \left(\frac{dr}{dt}\right)^3 = \frac{GM}{r(t)} + k\]
+\[\left(\frac{\dot{a}}{a}^2\right) = \frac{8\pi Gr_0^2}{3}P(t) + \frac{2\kappa}{r_0^2} \frac{1}{a(t)^2}\]
+\[M- \frac{4\pi}{3} p(t) r(t)^3\]
+\[\frac{4G\pi r(t)^2 p(t)}{3} + \kappa = 1/2 \frac{dr}{dt}^3\]
+
+\[r(t)= a(t)r_0\]
+\[\frac{1}{2}r^2_0 \dot{a}^2 = \frac{4}{3} G\pi (a(t)r_0)^2 + \kappa =\frac{1}{2} \left(\frac{dr}{dt}\right)^2\]
+
+\[\boxed{\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi}{3}p(t) + \frac{2k}{r^2_0} \frac{1}{a(t)^2}}\]
+
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+Given \dots 
+\[\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi}{3}p(t) + \frac{2k}{r^2_0} \frac{1}{a(t)^2}\]
+\[\left(\frac{\dot{a}}{a}\right)^2 = H(t)^2\]
+\[k = 0\]
+\[H(t)^2 = \frac{8\pi G}{3c^2} v_c\]
+
+\[\frac{3c^2H(t)^2}{8G\pi} = v_c\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+
+\subsection{Precision cosmological measurements}
+\hrule
+\vspace{.5cm}
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[H_{0_1} = 67 \text{kms}^{-1} \text{Mpc}^{-1}, \quad H_{0_2} = 74 \text{kms}^{-1} \text{Mpc}^{-1}\]
+\[V_{rec} = d * H_0\]
+We find \dots 
+
+\[\boxed{V_{rec_1} = \SI{7.504e+06}{\m / \s}, \quad V_{rec_2} = \SI{8.288e+06}{\m / \s}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+Given \dots 
+\[c = \lambda \nu\]
+\[\lambda = \frac{c}{\nu}\]
+\[\nu = 22.23508 \text{ GHz}\]
+We find \dots 
+\[\boxed{\lambda = \SI{1.348e-02}{\m}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+Given \dots 
+
+\[V_{rec_1} = \SI{7.504e+06}{\m / \s}, \quad V_{rec_2} = \SI{8.288e+06}{\m / \s}\]
+\[\lambda_{obsv} = \lambda_{rest}(1 +z)\]
+\[z = \frac{v}{c}\]
+
+We find \dots 
+\[z_1 = \SI{2.503e-02}{}, \quad z_2 = \SI{2.765e-02}{}\]
+\[\nu_1 = \SI{2.279e+10}{1/\s},\quad \nu_2 = \SI{2.285e+10}{1/\s}\]
+\[\lambda_1 = \SI{1.315e-02}{\m}, \quad \lambda_2 = \SI{1.312e-02}{\m}\]
+\[\boxed{\Delta \lambda = \SI{3.347e-05}{\m}}\]
+
+
+\subsection{Matter-dark energy equality}
+\hrule
+\vspace{.5cm}
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+Given \dots 
+\[\Omega_{\lambda_0} = (1+z_{eq})^3\Omega_{m_0}\]
+We find \dots 
+\[\frac{\Omega_{\lambda_0}}{\Omega_{m_0}}= (1+z_{eq})^3\]
+\[\left(\frac{\Omega_{\lambda_0}}{\Omega_{m_0}}\right)^{1/3} -1 = z_{eq}\]
+\[\boxed{z_{eq} \approx 3.931 \times 10^{-1}}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[\ddot{a} = H_0\left[\frac{\Omega_{r,0}}{a^2} + \frac{\Omega_{m,0}}{a}+ \Omega_{\lambda,0}a^2\right]^{1/2}\]
+\[1 + z = \frac{1}{a} \Rightarrow a = \frac{1}{1+z}\]
+We find\dots 
+\[\boxed{\ddot{a} = H_0 (0.86734)}\]
+
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+Given \dots 
+\[\frac{H(t)^2}{H_0^2} = \frac{\Omega_{r,0}}{a(t)^4} + \frac{\Omega_{m,0}}{a(t)^3} + \Omega_{\Lambda}\]
+We find \dots 
+
+\[{H(t)} = {H_0^2}\left[\frac{\Omega_{m,0}}{a(t)^3} + \Omega_{\Lambda}\right]^{1/2}\]
+
+\[\boxed{H(t) = (H_0)^2 1.2083}\]
+
+
+
+\subsection{Curvature}
+\hrule
+\vspace{.5cm}
+
+Given \dots 
+\[\alpha + \beta + \gamma = \pi + \frac{\kappa A}{r^2_{c,0}}, \quad \text{By spherical} \Rightarrow \kappa = 1\]
+\[\alpha + \beta + \gamma = \theta_{tot}\]
+\[A = \frac{\sqrt{3}}{4} \ell^2, \quad \ell = 1\]
+We find \dots 
+\[\theta_{tot} = \pi + \frac{A}{r^2}\]
+\[\boxed{\theta_{tot} = \SI{3.141592664e+00}{\radian}}\]
+\[\boxed{\theta_{tot} - \pi = \SI{1.066806e-08}{\radian}}\]
+\hrule
+
+
+\begin{center}\footnote{spent an hour procrastinating the actual homework making this}
+\begin{tikzpicture}
+\begin{axis}[
+  title={Spherical triangle on a unit sphere},
+  axis lines = box,
+  scale = 1.4,
+  xlabel={$x$},
+  ylabel={$y$},
+  zlabel={$z$},
+  colormap/cool,
+  view={135}{25},
+  xmin=-.3, xmax=1,
+  ymin=-.3, ymax=1,
+  zmin=-.3, zmax=1,
+]
+
+  % --- Unit sphere as a surface ---
+  \addplot3[
+    surf,
+    samples=3,
+    domain=0:360,      % longitude
+    y domain=0:180,    % colatitude
+  ]
+  (
+    {cos(x)*sin(y)},   % x
+    {sin(x)*sin(y)},   % y
+    {cos(y)}           % z
+  );
+
+
+  % --- Edge AB: equator from (1,0,0) to (0,1,0) ---
+  %   \addplot3[
+  %     thick,
+  %     color=white,
+  %   ]
+  %   (
+  %     {cos(x)},          % x
+  %     {sin(x)},          % y
+  %     {0}                % z
+  %   );
+  % default domain is 0:360, so restrict:
+  \addplot3[
+    thick,
+    color=white,
+    domain=0:90
+  ]
+  (
+    {cos(x)},
+    {sin(x)},
+    {0}
+  );
+
+  % --- Edge AC: meridian at y=0, from equator to north pole ---
+  \addplot3[
+    thick,
+    color=white,
+    domain=0:90
+  ]
+  (
+    {cos(x)},          % x
+    {0},               % y
+    {sin(x)}           % z
+  );
+
+  % --- Edge BC: meridian at x=0, from equator to north pole ---
+  \addplot3[
+    thick,
+    color=white,
+    domain=0:90
+  ]
+  (
+    {0},               % x
+    {cos(x)},          % y
+    {sin(x)}           % z
+  );
+
+  % --- Mark the vertices A, B, C ---
+  \addplot3[
+    only marks,
+    mark=*,
+    mark size=2pt,
+    color=black,
+  ]
+  coordinates {
+    (1,0,0)
+    (0,1,0)
+    (0,0,1)
+  };
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+\subsection{Proper distances}
+\hrule
+\vspace{.5cm}
+Given \dots 
+\[r = \int_{t_{eq}}^{t_0} \frac{dt}{a(t)}\]
+\[a(t) = \frac{t}{t_0}\]
+
+We find \dots 
+\[r = ct_0\int_{t_{eq}}^{t_0} \frac{dt}{t}\]
+
+\[r = ct_0\ln(t) |_{t_{eq}}^{t_{t_0}}\]
+
+\[r = ct_0(\ln(t_0) -\ln(t_{eq}))\]
+
+\[r = ct_0\left[\ln\left(\frac{t_0}{t_{eq}}\right)\right]\]
+
+\[r = ct_0\left[\ln\left(\frac{1}{a_{eq}}\right)\right]\]
+
+\[r = ct_0\left(\ln\left(1+z\right)\right)\]
+
+\[\boxed{r \approx \SI{4.329e+25}{\m} \approx \SI{ 1.403e+03}{\Mpc}}\]
+
+
+\end{document}

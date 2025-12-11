@@ -89,8 +89,7 @@
 \fancyfoot[C]{\thepage}
 
 
-\subsection{}
-
+\subsection{Cosmology missing steps}
 
 \subsubsection{}
 \hrule
@@ -98,7 +97,7 @@
 
 Given \dots 
 
-\[E(t) = \frac{4\sigma_{SB}}{c}\left(T^4V\right), quad P(t) = \frac{4\sigma_{SB}}{3c}T^4\]
+\[E(t) = \frac{4\sigma_{SB}}{c}\left(T^4V\right), \quad P(t) = \frac{4\sigma_{SB}}{3c}T^4\]
 
 We find \dots
 \[ \frac{dE}{dt}\frac{4\sigma_{SB}}{c}\left(T^4V\right) = \frac{4\sigma_{SB}}{c}\left(4T^3V\frac{dT}{dt} + T^4 \frac{dV}{dt}\right)\]
@@ -190,18 +189,32 @@ Given \dots
 \[\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi}{3}p(t) + \frac{2k}{r^2_0} \frac{1}{a(t)^2}\]
 \[\left(\frac{\dot{a}}{a}\right)^2 = H(t)^2\]
 \[k = 0\]
+
+We find \dots 
 \[H(t)^2 = \frac{8\pi G}{3c^2} v_c\]
-
-\[\frac{3c^2H(t)^2}{8G\pi} = v_c\]
-
-\subsubsection{}
-\hrule
-\vspace{.5cm}
-
+\[\boxed{\frac{3c^2H(t)^2}{8G\pi} = v_c}\]
 
 \subsubsection{}
 \hrule
 \vspace{.5cm}
+Given \dots
+\[H(t)^2 = \frac{8 \pi G}{3c^2} \left[\frac{u_{r,0}}{a(t)^4} \frac{u_{m, 0}}{a(t)^4 + u_{\Lambda, 0}}\right]\]
+\[\frac{H(t)^2}{H_0^2} = \frac{\Omega_r}{a(t)^4} + \frac{\Omega_r}{a(t)^4} + \Omega_\Lambda\]
+
+\[\frac{da}{dt} = H_0 \left[\frac{\Omega_r}{a(t)^2} + \frac{\Omega_r}{a(t)} + \Omega_\Lambda a(t)^2 \right]^{1/2}\]
+
+\subsubsection{}
+\hrule
+\vspace{.5cm}
+\[\dot{a} = H_0 \left[\frac{\Omega_r}{a(t)^2} + \frac{\Omega_r}{a(t)} + \Omega_\Lambda a(t)^2 \right]^{1/2}\]
+
+\[\frac{d}{dt} \dot{a} = H_0 \left[\frac{\Omega_r}{a(t)^2} + \frac{\Omega_r}{a(t)} + \Omega_\Lambda a(t)^2 \right]^{-1/2} \times \left[-2\frac{\Omega_r}{a(t)^3} - \frac{\Omega_r}{a(t)^2} + 2\Omega_\Lambda a(t) \right]\]
+
+\[\ddot{a} = H_0 \frac{\left[-2\frac{\Omega_r}{a(t)^3} - \frac{\Omega_r}{a(t)^2} + 2\Omega_\Lambda a(t) \right]}{\left[\frac{\Omega_r}{a(t)^2} + \frac{\Omega_r}{a(t)} + \Omega_\Lambda a(t)^2 \right]^{1/2}}\]
+
+\[\ddot{a} = H_0 \frac{\left[-2\frac{\Omega_r}{a(t)^3} - \frac{\Omega_r}{a(t)^2} + 2\Omega_\Lambda a(t) \right]}{\cancel{\left[\frac{\Omega_r}{a(t)^2} + \frac{\Omega_r}{a(t)} + \Omega_\Lambda a(t)^2 \right]^{1/2}}}\]
+
+\[\boxed{\ddot{a} = H_0 \left[-2\frac{\Omega_r}{a(t)^3} - \frac{\Omega_r}{a(t)^2} + 2\Omega_\Lambda a(t) \right]^{1/2}}\]
 
 
 \subsection{Precision cosmological measurements}
@@ -315,11 +328,12 @@ We find \dots
 ]
 
   % --- Unit sphere as a surface ---
-  \addplot3[
+    \addplot3[
     surf,
-    samples=3,
+    samples=30,
     domain=0:360,      % longitude
     y domain=0:180,    % colatitude
+    opacity=1,
   ]
   (
     {cos(x)*sin(y)},   % x
@@ -379,13 +393,15 @@ We find \dots
     only marks,
     mark=*,
     mark size=2pt,
-    color=black,
+    color=white,
   ]
   coordinates {
     (1,0,0)
     (0,1,0)
     (0,0,1)
   };
+
+
 
 \end{axis}
 \end{tikzpicture}
